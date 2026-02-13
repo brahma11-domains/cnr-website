@@ -1,122 +1,873 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CNR Overseas Education Consultants | Study Abroad (UK, USA, Canada, Australia)</title>
+    <meta name="description" content="CNR Overseas Education Consultants – study abroad guidance for UK, USA, Canada, Australia. Admissions, documentation, visa processing, interview training and accommodation support." />
+    <meta name="theme-color" content="#0B3B8F" />
 
-    <meta name="robots" content="noindex,nofollow" />
-    <title>CNR Study Abroad Consultants - Under Maintenance</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="CNR Overseas Education Consultants" />
+    <meta property="og:description" content="Admissions Available Worldwide. Study • Work • PR guidance for UK, USA, Canada, Australia." />
+    <meta property="og:type" content="website" />
+
+    <!-- Basic SEO -->
+    <link rel="canonical" href="https://cnr-studyabroadconsultants.com/" />
 
     <style>
-        body {
-          font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-          margin: 0;
-          background: #f6f7fb;
+        :root{
+          --bg:#0B1220;
+          --card:#0f1b33;
+          --card2:#0e1a2f;
+          --text:#eaf0ff;
+          --muted:rgba(234,240,255,.78);
+          --muted2:rgba(234,240,255,.62);
+          --brand:#0B3B8F;    /* Deep blue */
+          --brand2:#1E6BFF;   /* Bright blue */
+          --accent:#22C55E;   /* Green */
+          --warn:#F59E0B;
+          --line:rgba(255,255,255,.10);
+          --shadow: 0 18px 60px rgba(0,0,0,.35);
+          --radius: 18px;
+          --radius2: 26px;
+          --max: 1120px;
         }
-        .wrap {
-          min-height: 100vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 24px;
+
+        *{box-sizing:border-box}
+        html,body{height:100%}
+        body{
+          margin:0;
+          font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+          color:var(--text);
+          background:
+            radial-gradient(1200px 600px at 15% 0%, rgba(30,107,255,.35), transparent 55%),
+            radial-gradient(900px 600px at 90% 10%, rgba(34,197,94,.18), transparent 60%),
+            linear-gradient(180deg, #070b14, #0b1220 30%, #070b14);
+          line-height:1.55;
         }
-        .card {
-          max-width: 760px;
-          width: 100%;
-          background: #fff;
-          border-radius: 16px;
-          padding: 28px;
-          box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+        a{color:inherit}
+        .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+
+        /* Top bar */
+        .topbar{
+          background: rgba(7,11,20,.65);
+          border-bottom:1px solid var(--line);
+          backdrop-filter: blur(10px);
         }
-        .badge {
-          display: inline-block;
-          background: #fff3cd;
-          color: #856404;
-          padding: 6px 10px;
-          border-radius: 999px;
-          font-size: 12px;
-          font-weight: 600;
-          margin-bottom: 10px;
-          border: 1px solid #ffeeba;
+        .topbar .wrap{
+          display:flex; gap:12px; align-items:center; justify-content:space-between;
+          padding:10px 18px;
+          font-size:14px;
+          color:var(--muted);
         }
-        h1 {
-          margin: 0 0 10px;
-          font-size: 28px;
-          line-height: 1.2;
+        .topbar .left, .topbar .right{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+        .pill{
+          display:inline-flex; gap:8px; align-items:center;
+          padding:6px 10px;
+          border:1px solid var(--line);
+          border-radius:999px;
+          background: rgba(255,255,255,.04);
         }
-        p {
-          margin: 10px 0;
-          color: #333;
-          line-height: 1.6;
+        .pill strong{color:var(--text); font-weight:650}
+        .sep{opacity:.5}
+
+        /* Header / Nav */
+        header{
+          position:sticky; top:0; z-index:50;
+          background: rgba(11,18,32,.68);
+          border-bottom:1px solid var(--line);
+          backdrop-filter: blur(12px);
         }
-        .small {
-          color: #666;
-          font-size: 14px;
+        .nav{
+          display:flex; align-items:center; justify-content:space-between;
+          padding:14px 0;
+          gap:16px;
         }
-        .contact {
-          margin-top: 18px;
-          padding-top: 16px;
-          border-top: 1px solid #eee;
+        .brand{
+          display:flex; align-items:center; gap:12px; text-decoration:none;
         }
-        .contact h2 {
-          margin: 0 0 8px;
-          font-size: 16px;
+        .logo{
+          width:42px; height:42px; border-radius:12px;
+          display:grid; place-items:center;
+          background: linear-gradient(135deg, rgba(30,107,255,.95), rgba(11,59,143,.95));
+          box-shadow: 0 10px 30px rgba(30,107,255,.25);
+          font-weight:800;
+          letter-spacing:.5px;
         }
-        .contact-row {
-          margin: 8px 0;
-          font-size: 14px;
-          color: #333;
+        .brand .name{
+          display:flex; flex-direction:column; gap:2px;
         }
-        a {
-          color: #0b5fff;
-          text-decoration: none;
+        .brand .name b{font-size:15px; letter-spacing:.2px}
+        .brand .name span{font-size:12px; color:var(--muted2)}
+        nav ul{
+          list-style:none; margin:0; padding:0;
+          display:flex; gap:18px; align-items:center;
         }
-        a:hover {
-          text-decoration: underline;
+        nav a{
+          text-decoration:none;
+          color:var(--muted);
+          font-size:14px;
+          padding:8px 10px;
+          border-radius:10px;
+          transition: .15s ease;
         }
-        .label {
-          display: inline-block;
-          min-width: 58px;
-          font-weight: 600;
-          color: #111;
+        nav a:hover{color:var(--text); background:rgba(255,255,255,.06)}
+        .ctaRow{display:flex; gap:10px; align-items:center}
+        .btn{
+          display:inline-flex; align-items:center; justify-content:center;
+          gap:8px;
+          border-radius:14px;
+          padding:10px 14px;
+          border:1px solid var(--line);
+          background: rgba(255,255,255,.04);
+          color:var(--text);
+          text-decoration:none;
+          font-weight:650;
+          font-size:14px;
+          cursor:pointer;
+          transition: transform .12s ease, background .12s ease, border-color .12s ease;
+          user-select:none;
+        }
+        .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.07)}
+        .btn.primary{
+          border-color: rgba(30,107,255,.55);
+          background: linear-gradient(135deg, rgba(30,107,255,.95), rgba(11,59,143,.95));
+          box-shadow: 0 14px 35px rgba(30,107,255,.25);
+        }
+        .btn.whatsapp{
+          border-color: rgba(34,197,94,.45);
+          background: linear-gradient(135deg, rgba(34,197,94,.92), rgba(16,185,129,.78));
+          box-shadow: 0 14px 35px rgba(34,197,94,.18);
+        }
+
+        /* Mobile nav */
+        .menuBtn{display:none}
+        .drawer{
+          display:none;
+          border-top:1px solid var(--line);
+          padding:12px 0 16px;
+        }
+        .drawer a{display:block; padding:10px 12px; border-radius:12px}
+
+        /* Hero */
+        .hero{padding:38px 0 18px}
+        .heroGrid{
+          display:grid;
+          grid-template-columns: 1.2fr .8fr;
+          gap:18px;
+          align-items:stretch;
+        }
+        .heroCard{
+          border:1px solid var(--line);
+          border-radius: var(--radius2);
+          background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+          box-shadow: var(--shadow);
+          overflow:hidden;
+        }
+        .heroCard .inner{padding:26px}
+        .tag{
+          display:inline-flex; align-items:center; gap:8px;
+          padding:6px 10px;
+          border-radius:999px;
+          border:1px solid rgba(245,158,11,.35);
+          background: rgba(245,158,11,.10);
+          color: rgba(255,255,255,.92);
+          font-size:13px;
+          font-weight:650;
+        }
+        h1{
+          margin:14px 0 10px;
+          font-size:44px;
+          line-height:1.05;
+          letter-spacing:-.6px;
+        }
+        .sub{
+          margin:0;
+          color:var(--muted);
+          font-size:16px;
+          max-width:60ch;
+        }
+        .heroPoints{
+          display:flex; flex-wrap:wrap;
+          gap:10px;
+          margin-top:16px;
+          color:var(--muted);
+          font-size:14px;
+        }
+        .chip{
+          display:inline-flex; gap:8px; align-items:center;
+          padding:8px 10px;
+          border:1px solid var(--line);
+          border-radius:999px;
+          background: rgba(255,255,255,.04);
+        }
+        .heroActions{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+        .mini{
+          margin-top:16px;
+          display:flex; gap:16px; flex-wrap:wrap;
+          padding-top:16px;
+          border-top:1px solid var(--line);
+          color:var(--muted);
+          font-size:14px;
+        }
+        .mini a{color:var(--text); text-decoration:none}
+        .mini a:hover{text-decoration:underline}
+
+        /* Right hero panel */
+        .heroAside{
+          border:1px solid var(--line);
+          border-radius: var(--radius2);
+          background:
+            radial-gradient(500px 350px at 30% 20%, rgba(30,107,255,.35), transparent 60%),
+            radial-gradient(500px 350px at 80% 60%, rgba(34,197,94,.18), transparent 60%),
+            linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+          box-shadow: var(--shadow);
+          padding:22px;
+          display:flex; flex-direction:column; gap:14px;
+          overflow:hidden;
+        }
+        .asideTitle{font-weight:750; font-size:15px; letter-spacing:.2px}
+        .flags{display:grid; grid-template-columns: repeat(2, 1fr); gap:10px}
+        .flagCard{
+          border:1px solid var(--line);
+          border-radius:16px;
+          background: rgba(255,255,255,.04);
+          padding:14px;
+          display:flex; flex-direction:column; gap:6px;
+          min-height:92px;
+        }
+        .flagCard b{font-size:14px}
+        .flagCard span{font-size:13px; color:var(--muted2)}
+        .asideBox{
+          border:1px solid var(--line);
+          border-radius:16px;
+          background: rgba(255,255,255,.04);
+          padding:14px;
+        }
+        .grid2{display:grid; grid-template-columns: 1fr; gap:8px; color:var(--muted); font-size:14px}
+        .grid2 a{color:var(--text); text-decoration:none}
+        .grid2 a:hover{text-decoration:underline}
+
+        /* Sections */
+        section{padding:30px 0}
+        .sectionTitle{
+          display:flex; align-items:flex-end; justify-content:space-between;
+          gap:12px;
+          margin-bottom:14px;
+        }
+        .sectionTitle h2{
+          margin:0;
+          font-size:24px;
+          letter-spacing:-.2px;
+        }
+        .sectionTitle p{margin:0; color:var(--muted); font-size:14px}
+        .cards{
+          display:grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap:12px;
+        }
+        .card{
+          border:1px solid var(--line);
+          border-radius: var(--radius);
+          background: rgba(255,255,255,.04);
+          padding:16px;
+          min-height:150px;
+        }
+        .card b{display:block; font-size:15px; margin-bottom:6px}
+        .card ul{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:14px}
+        .card li{margin:6px 0}
+        .soft{
+          border:1px solid var(--line);
+          border-radius: var(--radius2);
+          background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+          padding:18px;
+        }
+
+        /* MBBS grid */
+        .countryGrid{
+          display:grid;
+          grid-template-columns: repeat(5, 1fr);
+          gap:10px;
+          margin-top:12px;
+        }
+        .pill2{
+          border:1px solid var(--line);
+          border-radius:999px;
+          background: rgba(255,255,255,.04);
+          padding:10px 12px;
+          text-align:center;
+          font-weight:650;
+          font-size:14px;
+          color:var(--text);
+        }
+
+        /* Why choose */
+        .whyGrid{
+          display:grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap:12px;
+        }
+        .whyItem{
+          border:1px solid var(--line);
+          border-radius: var(--radius);
+          background: rgba(255,255,255,.04);
+          padding:16px;
+        }
+        .whyItem b{display:block; margin-bottom:6px}
+        .whyItem p{margin:0; color:var(--muted); font-size:14px}
+
+        /* Leadership */
+        .leadGrid{
+          display:grid;
+          grid-template-columns: 1fr 1fr;
+          gap:12px;
+          margin-top:10px;
+        }
+        .leadCard{
+          border:1px solid var(--line);
+          border-radius: var(--radius);
+          background: rgba(255,255,255,.04);
+          padding:16px;
+        }
+        .leadCard .role{color:var(--muted2); font-size:13px}
+        .leadCard .person{font-weight:800; margin-top:4px; font-size:16px}
+
+        /* CTA block */
+        .ctaBlock{
+          border:1px solid rgba(34,197,94,.35);
+          border-radius: var(--radius2);
+          background:
+            radial-gradient(700px 250px at 20% 10%, rgba(34,197,94,.22), transparent 60%),
+            linear-gradient(180deg, rgba(34,197,94,.12), rgba(255,255,255,.03));
+          padding:22px;
+          display:flex;
+          align-items:center;
+          justify-content:space-between;
+          gap:14px;
+          box-shadow: var(--shadow);
+        }
+        .ctaBlock h3{margin:0; font-size:18px}
+        .ctaBlock p{margin:6px 0 0; color:var(--muted); font-size:14px}
+
+        /* Footer */
+        footer{
+          border-top:1px solid var(--line);
+          padding:26px 0 34px;
+          color:var(--muted);
+          font-size:14px;
+        }
+        .footGrid{
+          display:grid;
+          grid-template-columns: 1.2fr .8fr;
+          gap:14px;
+          align-items:start;
+        }
+        .footGrid a{color:var(--text); text-decoration:none}
+        .footGrid a:hover{text-decoration:underline}
+        .small{color:var(--muted2); font-size:12px; margin-top:10px}
+
+        /* Floating WhatsApp button */
+        .floatWA{
+          position:fixed;
+          right:16px;
+          bottom:16px;
+          z-index:90;
+          display:inline-flex;
+          gap:10px;
+          align-items:center;
+          padding:12px 14px;
+          border-radius:999px;
+          text-decoration:none;
+          background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(16,185,129,.85));
+          color:white;
+          font-weight:800;
+          box-shadow: 0 18px 50px rgba(34,197,94,.22);
+          border:1px solid rgba(255,255,255,.20);
+        }
+
+        /* Responsive */
+        @media (max-width: 980px){
+          .heroGrid{grid-template-columns: 1fr}
+          .cards{grid-template-columns: repeat(2, 1fr)}
+          .whyGrid{grid-template-columns: 1fr}
+          .countryGrid{grid-template-columns: repeat(3, 1fr)}
+          .footGrid{grid-template-columns: 1fr}
+          nav ul{display:none}
+          .menuBtn{display:inline-flex}
+          .drawer{display:block}
+        }
+        @media (max-width: 520px){
+          h1{font-size:34px}
+          .cards{grid-template-columns: 1fr}
+          .countryGrid{grid-template-columns: repeat(2, 1fr)}
+          .ctaBlock{flex-direction:column; align-items:flex-start}
+          .topbar .wrap{gap:8px}
         }
     </style>
+
+    <!-- LocalBusiness structured data -->
+    <script type="application/ld+json">
+        {
+            "@context":"https://schema.org",
+            "@type":"LocalBusiness",
+            "name":"CNR Overseas Education Consultants",
+            "url":"https://cnr-studyabroadconsultants.com/",
+            "email":"contact@cnr-studyabroadconsultants.com",
+            "telephone":[
+                "+447774366673",
+                "+917013098218",
+                "+918500199988"
+            ],
+            "areaServed":["United Kingdom","India","Worldwide"],
+            "description":"Admissions available worldwide. Study, Work and PR guidance for UK, USA, Canada, Australia. MBBS abroad support and end-to-end documentation and visa processing."
+        }
+    </script>
 </head>
 
 <body>
-<div class="wrap">
-    <div class="card">
-        <div class="badge">Under Maintenance</div>
-        <h1>CNR Study Abroad Consultants</h1>
-
-        <p>We’re currently performing website updates and maintenance. We’ll be back online shortly.</p>
-        <p class="small">Thank you for your patience.</p>
-
-        <div class="contact">
-            <h2>Need help now?</h2>
-
-            <div class="contact-row">
-                <span class="label">Email:</span>
-                <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a>
-            </div>
-
-            <div class="contact-row">
-                <span class="label">UK:</span>
-                <a href="tel:+447774366673">+44 777 43 666 73</a>
-            </div>
-
-            <div class="contact-row">
-                <span class="label">IND:</span>
-                <a href="tel:+917013098218">+91 7013098218</a> &nbsp;|&nbsp;
-                <a href="tel:+918500199988">8500199988</a>
-            </div>
-
-            <div class="contact-row">
-                <span class="label">Web:</span>
-                <a href="https://cnr-studyabroadconsultants.com">cnr-studyabroadconsultants.com</a>
-            </div>
+<!-- TOP CONTACT BAR -->
+<div class="topbar">
+    <div class="wrap">
+        <div class="left">
+            <span class="pill">📧 <strong><a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></strong></span>
+            <span class="sep">|</span>
+            <span class="pill">🇬🇧 UK: <strong><a href="tel:+447774366673">+44 777 43 666 73</a></strong></span>
+            <span class="pill">🇮🇳 IND: <strong><a href="tel:+917013098218">+91 7013098218</a></strong> <span class="sep">|</span> <strong><a href="tel:+918500199988">8500199988</a></strong></span>
+        </div>
+        <div class="right">
+            <span class="pill">🌐 <strong>cnr-studyabroadconsultants.com</strong></span>
         </div>
     </div>
 </div>
+
+<!-- HEADER / NAV -->
+<header>
+    <div class="wrap">
+        <div class="nav">
+            <a class="brand" href="#home" aria-label="CNR Home">
+                <div class="logo">CNR</div>
+                <div class="name">
+                    <b>CNR Overseas Education Consultants</b>
+                    <span>Study • Work • PR • MBBS Abroad</span>
+                </div>
+            </a>
+
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#mbbs">MBBS Abroad</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="ctaRow">
+                <button class="btn menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="drawer">☰ Menu</button>
+                <a class="btn" href="#contact">Free Consultation</a>
+                <a class="btn whatsapp" id="waTop" href="#" rel="nofollow">WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Mobile drawer -->
+        <div class="drawer" id="drawer" hidden>
+            <a href="#destinations">Destinations</a>
+            <a href="#mbbs">MBBS Abroad</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<main id="home" class="hero">
+    <div class="wrap">
+        <div class="heroGrid">
+            <div class="heroCard">
+                <div class="inner">
+                    <span class="tag">🟡 Under Maintenance (Temporary)</span>
+
+                    <h1>Admissions Available Worldwide.</h1>
+                    <p class="sub">
+                        We help students and families with a clear, guided process for <b>Study Abroad</b> — from university/course shortlisting to
+                        <b>documentation</b>, <b>visa processing</b>, <b>interview preparation</b>, and <b>accommodation support</b>.
+                    </p>
+
+                    <div class="heroPoints">
+                        <span class="chip">🎓 Study</span>
+                        <span class="chip">💼 Work</span>
+                        <span class="chip">🧭 PR Guidance</span>
+                        <span class="chip">🩺 MBBS Abroad</span>
+                        <span class="chip">🌍 UK • USA • Canada • Australia</span>
+                    </div>
+
+                    <div class="heroActions">
+                        <a class="btn primary" href="#contact">Get Free Counselling</a>
+                        <a class="btn whatsapp" id="waHero" href="#" rel="nofollow">Chat on WhatsApp</a>
+                        <a class="btn" href="#services">View Services</a>
+                    </div>
+
+                    <div class="mini" aria-label="Quick contact links">
+                        <div>📧 <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
+                        <div>🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a></div>
+                        <div>🇮🇳 <a href="tel:+917013098218">+91 7013098218</a> / <a href="tel:+918500199988">8500199988</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="heroAside">
+                <div class="asideTitle">Popular Destinations</div>
+                <div class="flags">
+                    <div class="flagCard">
+                        <b>🇬🇧 United Kingdom</b>
+                        <span>Admissions • Visa • Guidance</span>
+                    </div>
+                    <div class="flagCard">
+                        <b>🇺🇸 United States</b>
+                        <span>Programs • Documentation</span>
+                    </div>
+                    <div class="flagCard">
+                        <b>🇨🇦 Canada</b>
+                        <span>Study • Work options</span>
+                    </div>
+                    <div class="flagCard">
+                        <b>🇦🇺 Australia</b>
+                        <span>Study • PR guidance</span>
+                    </div>
+                </div>
+
+                <div class="asideBox">
+                    <div class="asideTitle">Need help now?</div>
+                    <div class="grid2">
+                        <div><span style="color:var(--muted2)">Email:</span> <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
+                        <div><span style="color:var(--muted2)">UK:</span> <a href="tel:+447774366673">+44 777 43 666 73</a></div>
+                        <div><span style="color:var(--muted2)">IND:</span> <a href="tel:+917013098218">+91 7013098218</a> <span class="sep">|</span> <a href="tel:+918500199988">8500199988</a></div>
+                        <div><span style="color:var(--muted2)">Web:</span> cnr-studyabroadconsultants.com</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<!-- DESTINATIONS -->
+<section id="destinations">
+    <div class="wrap">
+        <div class="sectionTitle">
+            <div>
+                <h2>Study Destinations</h2>
+                <p>Simple, transparent support — from shortlist to visa.</p>
+            </div>
+            <p class="pill">✅ End-to-end guidance</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <b>🇬🇧 United Kingdom</b>
+                <ul>
+                    <li>Course & university selection</li>
+                    <li>Documentation support</li>
+                    <li>Visa processing guidance</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>🇺🇸 United States</b>
+                <ul>
+                    <li>Program selection</li>
+                    <li>Application assistance</li>
+                    <li>Interview preparation</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>🇨🇦 Canada</b>
+                <ul>
+                    <li>Admissions planning</li>
+                    <li>Work/PR pathway guidance</li>
+                    <li>Visa documentation</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>🇦🇺 Australia</b>
+                <ul>
+                    <li>University shortlisting</li>
+                    <li>Application support</li>
+                    <li>Accommodation assistance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MBBS -->
+<section id="mbbs">
+    <div class="wrap">
+        <div class="sectionTitle">
+            <div>
+                <h2>MBBS Abroad</h2>
+                <p>Top medical universities across multiple countries.</p>
+            </div>
+            <p class="pill">📣 Applications open (June & September)</p>
+        </div>
+
+        <div class="soft">
+            <p style="margin:0; color:var(--muted)">
+                We support MBBS admissions with university selection, documentation, visa processing, and accommodation assistance.
+            </p>
+
+            <div class="countryGrid" aria-label="MBBS countries">
+                <div class="pill2">Russia</div>
+                <div class="pill2">Georgia</div>
+                <div class="pill2">China</div>
+                <div class="pill2">Belarus</div>
+                <div class="pill2">Romania</div>
+                <div class="pill2">Bulgaria</div>
+                <div class="pill2">Kyrgyzstan</div>
+                <div class="pill2">Kazakhstan</div>
+                <div class="pill2">Uzbekistan</div>
+                <div class="pill2">Poland</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="wrap">
+        <div class="sectionTitle">
+            <div>
+                <h2>Our Services</h2>
+                <p>Everything you need — handled step-by-step.</p>
+            </div>
+            <p class="pill">🎯 Lead-ready setup</p>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <b>Free Counselling & Admission</b>
+                <ul>
+                    <li>Profile review</li>
+                    <li>Country guidance</li>
+                    <li>Clear next steps</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>University & Course Selection</b>
+                <ul>
+                    <li>Shortlist universities</li>
+                    <li>Course fit & outcomes</li>
+                    <li>Intake planning</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>Documentation Support</b>
+                <ul>
+                    <li>Checklists</li>
+                    <li>Application support</li>
+                    <li>Quality review</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>Visa Processing</b>
+                <ul>
+                    <li>Visa file preparation</li>
+                    <li>Submission guidance</li>
+                    <li>Follow-up support</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <b>Interview Training</b>
+                <ul>
+                    <li>Mock interviews</li>
+                    <li>Confidence building</li>
+                    <li>Common questions</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>Accommodation Assistance</b>
+                <ul>
+                    <li>Initial stay support</li>
+                    <li>Options guidance</li>
+                    <li>Arrival checklist</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>Education Loan Guidance</b>
+                <ul>
+                    <li>Document checklist</li>
+                    <li>Process guidance</li>
+                    <li>Basic planning support</li>
+                </ul>
+            </div>
+            <div class="card">
+                <b>Worldwide Admissions</b>
+                <ul>
+                    <li>Multiple countries</li>
+                    <li>Flexible options</li>
+                    <li>Personalised plan</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="wrap">
+        <div class="sectionTitle">
+            <div>
+                <h2>About CNR</h2>
+                <p>Professional guidance with a clear, documented process.</p>
+            </div>
+            <p class="pill">✅ Trusted support</p>
+        </div>
+
+        <div class="soft">
+            <p style="margin:0; color:var(--muted)">
+                CNR Overseas Education Consultants provides overseas education and MBBS abroad guidance with end-to-end support:
+                counselling, university/course selection, documentation, visa processing, interview training and accommodation assistance.
+            </p>
+
+            <div class="leadGrid" aria-label="Leadership">
+                <div class="leadCard">
+                    <div class="role">Leadership</div>
+                    <div class="person">Dr. C. Udaya Kumar Reddy, MD</div>
+                </div>
+                <div class="leadCard">
+                    <div class="role">CEO</div>
+                    <div class="person">Brahmaputhra Reddy</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="height:12px"></div>
+
+        <div class="whyGrid" aria-label="Why choose us">
+            <div class="whyItem">
+                <b>Clear, step-by-step process</b>
+                <p>We keep it simple: shortlist → documents → application → visa → travel support.</p>
+            </div>
+            <div class="whyItem">
+                <b>End-to-end guidance</b>
+                <p>Admissions, documentation, visa processing, interview training and accommodation assistance.</p>
+            </div>
+            <div class="whyItem">
+                <b>Reachable support (UK + India)</b>
+                <p>Easy contact on email, phone and WhatsApp for fast responses.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section>
+    <div class="wrap">
+        <div class="ctaBlock">
+            <div>
+                <h3>Want guidance for Study Abroad or MBBS Abroad?</h3>
+                <p>Message us on WhatsApp for quick support and a free consultation.</p>
+            </div>
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+                <a class="btn whatsapp" id="waCta" href="#" rel="nofollow">Chat on WhatsApp</a>
+                <a class="btn primary" href="#contact">Contact Details</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="wrap">
+        <div class="sectionTitle">
+            <div>
+                <h2>Contact</h2>
+                <p>We respond quickly on WhatsApp and email.</p>
+            </div>
+            <p class="pill">📍 Office address (map will be added)</p>
+        </div>
+
+        <div class="soft">
+            <div class="grid2">
+                <div><span style="color:var(--muted2)">Email:</span> <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
+                <div><span style="color:var(--muted2)">UK:</span> <a href="tel:+447774366673">+44 777 43 666 73</a></div>
+                <div><span style="color:var(--muted2)">India:</span> <a href="tel:+917013098218">+91 7013098218</a> <span class="sep">|</span> <a href="tel:+918500199988">8500199988</a></div>
+                <div><span style="color:var(--muted2)">Website:</span> cnr-studyabroadconsultants.com</div>
+                <div><span style="color:var(--muted2)">Office:</span> #4-2-C-5-1, NTR Circle, Kadiri Road, Madanapalle – 517325</div>
+            </div>
+
+            <div style="height:14px"></div>
+            <div class="pill" style="display:inline-flex">
+                ✅ Next: you will share Google location / what3words and we’ll embed the map here.
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="wrap">
+        <div class="footGrid">
+            <div>
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <div class="logo" style="width:38px;height:38px;border-radius:12px;">CNR</div>
+                    <div>
+                        <div style="font-weight:850; color:var(--text)">CNR Overseas Education Consultants</div>
+                        <div class="small">Admissions Available Worldwide • Study • Work • PR • MBBS Abroad</div>
+                    </div>
+                </div>
+
+                <div class="small">
+                    © <span id="year"></span> CNR Overseas Education Consultants. All rights reserved.
+                </div>
+            </div>
+
+            <div>
+                <div class="grid2">
+                    <div>📧 <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
+                    <div>🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a></div>
+                    <div>🇮🇳 <a href="tel:+917013098218">+91 7013098218</a> <span class="sep">|</span> <a href="tel:+918500199988">8500199988</a></div>
+                    <div>📍 Madanapalle – 517325</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="floatWA" id="waFloat" href="#" rel="nofollow" aria-label="Chat on WhatsApp">
+    💬 WhatsApp
+</a>
+
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const drawer = document.getElementById('drawer');
+    if (menuBtn && drawer) {
+      menuBtn.addEventListener('click', () => {
+        const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', String(!isOpen));
+        drawer.hidden = isOpen;
+      });
+    }
+
+    // WhatsApp link setup (using UK number as primary)
+    // NOTE: WhatsApp "wa.me" requires digits only, no plus or spaces.
+    const waNumber = "447774366673"; // UK: +44 777 43 666 73
+    const waMessage = encodeURIComponent(
+      "Hello CNR Overseas Education Consultants. I would like a free consultation for Study Abroad / MBBS Abroad. Please guide me."
+    );
+    const waUrl = `https://wa.me/${waNumber}?text=${waMessage}`;
+
+    ["waTop","waHero","waCta","waFloat"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute("href", waUrl);
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
