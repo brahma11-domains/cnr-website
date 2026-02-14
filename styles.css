@@ -147,15 +147,17 @@ header {
 }
 
 .logo-img {
-    height: 50px;
+    height: 70px;
     width: auto;
     border-radius: 8px;
+    object-fit: contain;
 }
 
 .brand h1 {
     margin: 0;
-    font-size: 16px;
+    font-size: 22px;
     line-height: 1.2;
+    font-weight: 700;
 }
 
 .brand p {
@@ -561,8 +563,9 @@ footer .foot {
 .wa-float a {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 14px 16px;
+    padding: 14px 20px;
     border-radius: 999px;
     background: linear-gradient(135deg, rgba(34, 197, 94, .98), rgba(34, 197, 94, .78));
     border: 1px solid rgba(34, 197, 94, .55);
@@ -570,15 +573,19 @@ footer .foot {
     font-weight: 750;
     color: #06210f;
     text-decoration: none;
+    line-height: 1;
 }
 
 .wa-float a i {
     font-size: 24px;
+    display: block;
+    line-height: 1;
 }
 
 .wa-float a span {
     color: #05210e;
     font-weight: 800;
+    line-height: 1;
 }
 
 /* Trust/Stats Bar */
