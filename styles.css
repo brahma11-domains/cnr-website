@@ -1257,7 +1257,7 @@ footer .foot {
     pointer-events: none;
 }
 
-.live-chat-banner > * {
+.live-chat-banner>* {
     position: relative;
     z-index: 1;
 }
