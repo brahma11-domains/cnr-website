@@ -47,12 +47,19 @@ The site now fetches a daily list of positive education articles from a public R
 
 To customize which stories appear:
 
-1. Open `index.html` and look for the two `rssUrl` variables in the script near the bottom — one for news and one for blog posts.
-2. Replace the Google News search query with any other RSS URL or Google News query, for example:
+1. Open `index.html` and locate the `loadBlogPosts` or `loadEducationNews` functions in the script near the bottom.
+2. In `loadBlogPosts` there is an array of `queries` – you can add or change entries here to any Google News search term, an arbitrary RSS feed URL (encoded with `encodeURIComponent`), or even a Medium topic feed. For example:
    ```js
-   const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=your+keywords&hl=en-US&gl=US&ceid=US:en');
+   const queries = [
+     'student+visa+study+abroad+positive',
+     'MBBS+abroad+india',
+     'AI+education+positive',
+     'your+own+keyword+here'
+   ];
    ```
-3. You can also point to a static JSON file hosted in this repo (e.g. `/blog-posts.json`) if you prefer to hand-craft a collection of links.
+3. The script fetches each feed, merges and sorts the items, then displays the six most recent articles across all sources.
+4. The education news loader works the same way; you can extend its `rssUrl` variable to a list as well if desired.
+5. Optionally, point to a static JSON file hosted in this repo (e.g. `/blog-posts.json`) if you prefer to curate content manually.
 
 This dynamic approach keeps both sections up to date with minimal maintenance, and it's entirely free.
 
