@@ -89,6 +89,14 @@
 
 <body>
 
+    <!-- COOKIE / PRIVACY BANNER -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>We use cookies and similar technologies to enhance your experience, analyze traffic, and provide our chat
+            service. By continuing to use this site you agree to our <a href="#" id="privacy-link">Privacy Policy</a>.
+        </p>
+        <button id="cookie-accept" class="btn primary" aria-label="Accept cookies">Accept</button>
+    </div>
+
     <!-- TOP BAR -->
     <div class="topbar">
         <div class="container">
@@ -1002,6 +1010,19 @@
         // Handle hash on page load
         if (window.location.hash) {
             smoothScrollToId(window.location.hash);
+        }
+
+        // Cookie banner handling
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('cookie-accept');
+        if (cookieBanner && acceptBtn) {
+            if (!localStorage.getItem('cookieBannerAccepted')) {
+                cookieBanner.style.display = 'flex';
+            }
+            acceptBtn.addEventListener('click', () => {
+                localStorage.setItem('cookieBannerAccepted', 'true');
+                cookieBanner.style.display = 'none';
+            });
         }
 
         // Form submission with feedback
