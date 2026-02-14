@@ -40,6 +40,10 @@ This site is hosted on GitHub Pages from the `main` branch. A GitHub Actions wor
 * **HTML validation** using [`html-validate`](https://github.com/htmllint/html-validate) to catch syntax mistakes early.
 * **HTML validation** is performed on every push.
 
+## Privacy & Cookies
+
+A simple cookie banner appears at the bottom of the page on first visit, informing users about analytics and chat cookies. Acceptance is stored in `localStorage` so the banner doesn't reappear. You can customize the text or link the "Privacy Policy" anchor to a real page with your terms.
+
 You can view workflow results in the **Actions** tab of the repository. This continuous feedback loop helps keep the website trustworthy and high‑quality.
 
 
