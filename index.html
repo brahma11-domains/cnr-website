@@ -41,24 +41,17 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!-- Crisp Chat Widget -->
+    <!-- Tawk.to Live Chat - FREE -->
     <script type="text/javascript">
-        window.$crisp = [];
-        window.CRISP_WEBSITE_ID = "YOUR_CRISP_WEBSITE_ID_HERE";
-        
-        (function() {
-            d = document;
-            s = d.createElement("script");
-            s.src = "https://client.crisp.chat/l.js";
-            s.async = 1;
-            d.getElementsByTagName("head")[0].appendChild(s);
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/YOUR_TAWK_PROPERTY_ID/1h4u5r19e';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
         })();
-
-        // Optional: Customize Crisp chat appearance and behavior
-        window.$crisp.push(["set", "session:data", [[
-            ["plan", "premium"],
-            ["country", "India"]
-        ]]]);
     </script>
 </head>
 
@@ -687,11 +680,12 @@
                 <div style="flex: 1;">
                     <h3 style="margin:0 0 10px 0; font-size:20px; color:white;">Need Instant Help?</h3>
                     <p style="margin:0 0 0 0; color:rgba(255,255,255,0.9); font-size:14px; line-height:1.6;">
-                        Chat with our counselors in real-time. Get answers to your questions about admissions, visas, 
+                        Chat with our counselors in real-time. Get answers to your questions about admissions, visas,
                         and study abroad opportunities right now.
                     </p>
                 </div>
-                <button onclick="if(window.$crisp) window.$crisp.push(['do', 'chat:open'])" class="btn primary" style="white-space: nowrap; height: fit-content;">
+                <button onclick="if(window.Tawk_API) window.Tawk_API.toggle()" class="btn primary"
+                    style="white-space: nowrap; height: fit-content;">
                     <i class="ph-bold ph-chat-circle-dots"></i> Start Chat
                 </button>
             </div>
@@ -918,14 +912,15 @@
     <!-- Floating Chat Buttons -->
     <div class="floating-chat-menu">
         <!-- Chat Button (Primary) -->
-        <button class="floating-btn chat-btn" onclick="if(window.$crisp) window.$crisp.push(['do', 'chat:open'])" 
+        <button class="floating-btn chat-btn" onclick="if(window.Tawk_API) window.Tawk_API.toggle()"
             aria-label="Chat with us" title="Chat with us">
             <i class="ph-fill ph-chat-circle-dots"></i>
         </button>
 
         <!-- WhatsApp Button -->
         <a href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%2FWork%2FPR%2FMBBS%20abroad."
-            class="floating-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+            class="floating-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
+            title="Chat on WhatsApp">
             <i class="ph-fill ph-whatsapp-logo"></i>
         </a>
 
