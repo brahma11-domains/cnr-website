@@ -759,34 +759,37 @@ footer .foot {
     outline: none;
     border-color: var(--accent2);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-.submit-btn {
-    width: 100%;
-    font-size: 16px;
-    padding: 14px;
-    transition: all 0.3s ease;
-}
 
-.submit-btn:disabled {
-    opacity: 0.7;
+    .submit-btn {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+        transition: all 0.3s ease;
+    }
+
+    .submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    .form-feedback {
+        margin-top: 12px;
+        font-weight: 600;
+    }
+
+    .form-feedback.success {
+        background: rgba(34, 197, 94, 0.15);
+        color: #dcfce7;
+        border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .form-feedback.error {
+        background: rgba(239, 68, 68, 0.15);
+        color: #fecaca;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
     cursor: not-allowed;
-}
-
-.form-feedback {
-    margin-top: 12px;
-    font-weight: 600;
-}
-
-.form-feedback.success {
-    background: rgba(34, 197, 94, 0.15);
-    color: #dcfce7;
-    border: 1px solid rgba(34, 197, 94, 0.3);
-}
-
-.form-feedback.error {
-    background: rgba(239, 68, 68, 0.15);
-    color: #fecaca;
-    border: 1px solid rgba(239, 68, 68, 0.3);
-}   cursor: not-allowed;
 }
 
 .submit-btn {
@@ -851,4 +854,169 @@ footer .foot {
     margin-bottom: 10px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+}
+
+/* FAQ SECTION */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.faq-question h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    flex: 1;
+}
+
+.faq-question i {
+    font-size: 20px;
+    color: var(--accent2);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+}
+
+.faq-answer p {
+    padding: 0 18px 18px 18px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.faq-answer strong {
+    color: var(--accent2);
+}
+
+/* BLOG SECTION */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 980px) {
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 620px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.blog-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.blog-card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(59, 130, 246, 0.03));
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.15);
+}
+
+.blog-date {
+    font-size: 12px;
+    color: var(--muted2);
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.blog-card h3 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--text);
+    flex-grow: 1;
+}
+
+.blog-card p {
+    margin: 0 0 15px 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.blog-tag {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.15);
+    color: #bfdbfe;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.blog-read-more {
+    color: var(--accent2);
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.blog-read-more:hover {
+    color: #60a5fa;
+    transform: translateX(4px);
 }

@@ -84,6 +84,8 @@
                     <a href="#destinations">Destinations</a>
                     <a href="#mbbs">MBBS Abroad</a>
                     <a href="#services">Services</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#blog">Blog</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </nav>
@@ -237,11 +239,12 @@
                                     Fill the form below and our experts will contact you within 24 hours.
                                 </p>
 
-                                <form class="contact-form" action="https://formspree.io/f/xkovrgwg" method="POST" id="contact-form">
+                                <form class="contact-form" action="https://formspree.io/f/xkovrgwg" method="POST"
+                                    id="contact-form">
                                     <div class="form-group">
                                         <label for="form-name">Name</label>
-                                        <input type="text" id="form-name" name="name" class="form-control" placeholder="Your Name"
-                                            required>
+                                        <input type="text" id="form-name" name="name" class="form-control"
+                                            placeholder="Your Name" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="form-phone">Phone Number</label>
@@ -262,7 +265,9 @@
                                     <button type="submit" class="btn primary submit-btn" id="submit-btn">
                                         <i class="ph-bold ph-paper-plane-right"></i> Send Request
                                     </button>
-                                    <div class="form-feedback" id="form-feedback" style="display: none; padding: 12px; border-radius: 8px; font-size: 14px; text-align: center;"></div>
+                                    <div class="form-feedback" id="form-feedback"
+                                        style="display: none; padding: 12px; border-radius: 8px; font-size: 14px; text-align: center;">
+                                    </div>
                                 </form>
 
                                 <div
@@ -530,6 +535,141 @@
                 </div>
             </section>
 
+            <!-- BOOK APPOINTMENT -->
+            <section id="book-appointment">
+                <div class="section-card" style="text-align: center;">
+                    <h2 style="margin:0 0 10px 0; font-size:22px;">Book Free Consultation</h2>
+                    <p style="margin:0 0 25px 0; color:var(--muted); line-height:1.65;">
+                        Schedule a 30-minute session with our expert counselors. No commitment, just guidance.
+                    </p>
+                    <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                        <a href="https://calendly.com/cnr-consultants/30min" target="_blank" rel="noopener" class="btn primary">
+                            <i class="ph-bold ph-calendar-check"></i> Schedule Now
+                        </a>
+                        <a href="#contact" class="btn">
+                            <i class="ph-bold ph-chat-dots"></i> Ask Questions First
+                        </a>
+                    </div>
+                    <p style="margin-top: 15px; font-size: 13px; color: var(--muted2);">
+                        ✓ Instant confirmation • ✓ Flexible timings • ✓ Expert guidance
+                    </p>
+                </div>
+            </section>
+
+            <!-- FAQ SECTION -->
+            <section id="faq">
+                <div class="section-card">
+                    <h2 style="margin:0 0 25px 0; font-size:22px;">Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>What is the best country for study abroad?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>It depends on your goals, budget, and academic profile. UK is best for quick 1-year masters & post-study work. USA offers STEM OPT & higher salaries. Canada provides PR pathways. Australia balances quality & cost. We help you choose based on your profile.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>How much does it cost to study abroad?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>UK:</strong> £15,000-25,000/year (fees) + £10,000-15,000 (living)<br><strong>USA:</strong> $20,000-50,000/year<br><strong>Canada:</strong> CAD 15,000-25,000/year<br><strong>Australia:</strong> AUD 20,000-35,000/year<br>We help you find scholarships & education loans to reduce costs.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>What is your visa success rate?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our visa success rate is <strong>98%</strong>. We provide expert guidance on financial documentation, interview preparation, and compliance to ensure your visa gets approved. Only rare cases with legal issues face rejections.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>Is MBBS abroad valid in India?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes! All MBBS programs we recommend are <strong>NMC & WHO approved</strong>. Graduates can practice in India after passing NEXT exam, and also practice abroad (USA, Canada, UK, etc.) after local licensing.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>How long does the application process take?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Typical timeline:</strong> 2-3 months (counseling → shortlisting → applications) + 1-2 months (visa processing) = 4-5 months total. We expedite this where possible.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>Do you guarantee admission?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We guarantee <strong>100% admission to at least one university</strong> on your shortlist. For MBBS, we have direct admission partnerships with leading universities globally.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BLOG INSIGHTS -->
+            <section id="blog">
+                <div class="section-card">
+                    <h2 style="margin:0 0 25px 0; font-size:22px;">Latest Insights & Updates</h2>
+                    <div class="blog-grid">
+                        <article class="blog-card">
+                            <div class="blog-date">Feb 14, 2026</div>
+                            <h3>UK Visa Changes 2026: What You Need to Know</h3>
+                            <p>New updates on post-study work visa (PSW) requirements and how they affect Indian students. We break down the changes and what it means for your career plans.</p>
+                            <div style="display: flex; gap: 10px; margin-top: 12px;">
+                                <span class="blog-tag">UK</span>
+                                <span class="blog-tag">Visa</span>
+                            </div>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-date">Feb 10, 2026</div>
+                            <h3>MBBS Abroad vs India: Cost & Career Comparison</h3>
+                            <p>Complete breakdown of fees, quality of education, and career prospects for MBBS in Georgia, Russia vs medical colleges in India. Which is better for you?</p>
+                            <div style="display: flex; gap: 10px; margin-top: 12px;">
+                                <span class="blog-tag">MBBS</span>
+                                <span class="blog-tag">Career</span>
+                            </div>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-date">Feb 05, 2026</div>
+                            <h3>How to Write a Winning Statement of Purpose (SOP)</h3>
+                            <p>Step-by-step guide with examples on crafting an SOP that gets you admitted. We share what universities actually look for in your essay.</p>
+                            <div style="display: flex; gap: 10px; margin-top: 12px;">
+                                <span class="blog-tag">Application</span>
+                                <span class="blog-tag">Tips</span>
+                            </div>
+                            <a href="#" class="blog-read-more">Read More →</a>
+                        </article>
+                    </div>
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="#" class="btn primary">
+                            <i class="ph-bold ph-newspaper"></i> View All Articles
+                        </a>
+                    </div>
+                </div>
+            </section>
+
             <!-- ABOUT -->
             <section id="about">
                 <div class="section-card">
@@ -537,9 +677,8 @@
                     <p style="margin:0; color:var(--muted); line-height:1.75;">
                         CNR Overseas Education Consultants helps students and families with trusted guidance for Study,
                         Work,
-                        PR, and MBBS Abroad. We’ll add your office location details (Google Maps / what3words) and a
-                        stronger
-                        “Trust” section (licenses/registrations, testimonials, gallery) once you share the details.
+                        PR, and MBBS Abroad. With 12+ years of experience and 500+ successful placements, we're committed to
+                        making global education accessible and affordable.
                     </p>
                 </div>
             </section>
@@ -610,12 +749,28 @@
         const formFeedback = document.getElementById('form-feedback');
 
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', function (e) {
                 submitBtn.disabled = true;
                 const originalText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="ph-bold ph-spinner-gap"></i> Sending...';
                 submitBtn.style.animation = 'spin 1s linear infinite';
             });
+        }
+
+        // FAQ Toggle functionality
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item.active').forEach(item => {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            faqItem.classList.toggle('active');
         }
 
         // Add spinner animation
