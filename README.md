@@ -41,10 +41,19 @@ This repository contains a simple static site built with **HTML**, **CSS**, and 
 
 A small JSON‑LD block describing your organisation is included in `<head>` to help search engines display your business details. Update the social links as needed.
 
-## Education News Feed
+## Education News & Dynamic Blogs
 
-The site now fetches a daily list of positive education articles from a public RSS feed using [rss2json](https://rss2json.com) and displays the top three in the **Education News & Updates** section. You can change the `rssUrl` constant in the embedded script to pull from any other public RSS source (news, blogs, etc.).
+The site now fetches a daily list of positive education articles from a public RSS feed using [rss2json](https://rss2json.com) and displays the top three in the **Education News & Updates** section. Similarly, the **Latest Insights & Updates** blog cards are also populated from a second feed that targets student visa and study abroad topics. Both sections are generated client-side by JavaScript so you can update their sources without editing the HTML.
 
-This keeps the homepage fresh without requiring manual edits or paid services.
+To customize which stories appear:
+
+1. Open `index.html` and look for the two `rssUrl` variables in the script near the bottom — one for news and one for blog posts.
+2. Replace the Google News search query with any other RSS URL or Google News query, for example:
+   ```js
+   const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=your+keywords&hl=en-US&gl=US&ceid=US:en');
+   ```
+3. You can also point to a static JSON file hosted in this repo (e.g. `/blog-posts.json`) if you prefer to hand-craft a collection of links.
+
+This dynamic approach keeps both sections up to date with minimal maintenance, and it's entirely free.
 
 This site has been built to help you establish trust in your local area using only free tools and minimal technical overhead. Feel free to adapt and expand as your startup grows.
