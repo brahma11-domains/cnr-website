@@ -38,9 +38,9 @@ This repository contains a simple static site built with **HTML**, **CSS**, and 
 This site is hosted on GitHub Pages from the `main` branch. A GitHub Actions workflow (`.github/workflows/ci.yml`) runs on every push and pull request against `main` or any feature branches:
 
 * **HTML validation** using [`html-validate`](https://github.com/htmllint/html-validate) to catch syntax mistakes early.
-* **Lighthouse CI** against the live site URL to monitor performance and accessibility scores. Configuration lives in `.lighthouserc.json` and will fail the job if scores drop below thresholds.
+* **HTML validation** is performed on every push.
 
-You can view the workflow results in the **Actions** tab of the repository. This continuous feedback loop helps keep the website trustworthy and high‑quality.
+You can view workflow results in the **Actions** tab of the repository. This continuous feedback loop helps keep the website trustworthy and high‑quality.
 
 
 * Paste your Google Analytics (GA4) measurement ID into the `<head>` snippet (replace `G-XXXXXXXXXX`).
