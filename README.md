@@ -33,6 +33,16 @@ This repository contains a simple static site built with **HTML**, **CSS**, and 
 
 ## Analytics & Search Console
 
+## GitHub Pages & CI
+
+This site is hosted on GitHub Pages from the `main` branch. A GitHub Actions workflow (`.github/workflows/ci.yml`) runs on every push and pull request against `main` or any feature branches:
+
+* **HTML validation** using [`html-validate`](https://github.com/htmllint/html-validate) to catch syntax mistakes early.
+* **Lighthouse CI** against the live site URL to monitor performance and accessibility scores. Configuration lives in `.lighthouserc.json` and will fail the job if scores drop below thresholds.
+
+You can view the workflow results in the **Actions** tab of the repository. This continuous feedback loop helps keep the website trustworthy and high‑quality.
+
+
 * Paste your Google Analytics (GA4) measurement ID into the `<head>` snippet (replace `G-XXXXXXXXXX`).
 * Add your Google Search Console verification code in the corresponding `<meta>` tag.
 * The contact and newsletter forms send simple `gtag('event', ...)` events so you can track submissions.
