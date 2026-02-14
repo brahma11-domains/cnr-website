@@ -1007,6 +1007,21 @@ footer .foot {
     text-transform: uppercase;
 }
 
+/* MBBS GRID */
+.mbbs-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 980px) {
+    .mbbs-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
 /* FAQ SECTION */
 .faq-grid {
     display: grid;
