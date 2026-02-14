@@ -33,13 +33,45 @@
         rel="stylesheet">
 
     <!-- External CSS -->
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Favicon -->
+    <!-- Favicon & touch icons -->
+    <!-- replace with your generated favicon files (free online generators) -->
+    <link rel="icon" href="assets/images/favicon.ico" sizes="32x32" type="image/x-icon">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="assets/images/logo.jpeg" type="image/jpeg">
+
+    <!-- Google Search Console verification -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+
+    <!-- Google Analytics (GA4) - replace G-XXXXXXXXXX -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Business schema (Organization) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CNR Overseas Education Consultants",
+      "url": "https://cnr-studyabroadconsultants.com",
+      "logo": "https://cnr-studyabroadconsultants.com/assets/images/logo.jpeg",
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://www.instagram.com/yourprofile",
+        "https://www.linkedin.com/company/yourcompany"
+      ]
+    }
+    </script>
 
     <!-- Tawk.to Live Chat - FREE -->
     <script type="text/javascript">
@@ -93,12 +125,18 @@
                     </div>
                 </a>
 
+                <!-- mobile menu toggle -->
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="ph-fill ph-list"></i>
+                </button>
+
                 <nav class="navlinks" aria-label="Primary navigation">
                     <a href="#destinations">Destinations</a>
                     <a href="#mbbs">MBBS Abroad</a>
                     <a href="#services">Services</a>
                     <a href="#faq">FAQ</a>
                     <a href="#blog">Blog</a>
+                    <a href="#education-news">News</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
                 </nav>
@@ -252,6 +290,9 @@
 
                                 <form class="contact-form" action="https://formspree.io/f/xkovrgwg" method="POST"
                                     id="contact-form">
+                                    <!-- honeypot field to deter spam bots; real users won't see it -->
+                                    <input type="text" name="company" style="display:none" tabindex="-1"
+                                        autocomplete="off">
                                     <div class="form-group">
                                         <label for="form-name">Name</label>
                                         <input type="text" id="form-name" name="name" class="form-control"
@@ -814,95 +855,112 @@
                             <i class="ph-bold ph-newspaper"></i> View All Articles
                         </a>
                     </div>
+            </section>
+
+            <!-- EDUCATION NEWS (external feeds) -->
+            <section id="education-news">
+                <div class="section-card">
+                    <h2 style="margin:0 0 25px 0; font-size:22px;">Education News & Updates</h2>
+                    <div id="education-news-container" class="news-grid"></div>
+                    <div style="text-align:center; margin-top:20px;">
+                        <a href="#" class="btn">
+                            <i class="ph-bold ph-globe"></i> More News
+                        </a>
+                    </div>
                 </div>
             </section>
 
             <!-- NEWSLETTER SIGNUP -->
-            <section id="newsletter">
-                <div class="newsletter-card">
-                    <div class="newsletter-content">
-                        <div style="flex: 1;">
-                            <h3 style="margin:0 0 8px 0; font-size:20px;">Stay Updated on Study Abroad Opportunities
-                            </h3>
-                            <p style="margin:0 0 20px 0; color:var(--muted); line-height:1.6; font-size:14px;">
-                                Get monthly insights on visa updates, scholarship opportunities, and success stories.
-                                Plus,
-                                <strong>free downloadable guides</strong> for IELTS, SOP writing, and visa preparation.
+        </div>
+        </div>
+        </section>
+
+        <!-- NEWSLETTER SIGNUP -->
+        <section id="newsletter">
+            <div class="newsletter-card">
+                <div class="newsletter-content">
+                    <div style="flex: 1;">
+                        <h3 style="margin:0 0 8px 0; font-size:20px;">Stay Updated on Study Abroad Opportunities
+                        </h3>
+                        <p style="margin:0 0 20px 0; color:var(--muted); line-height:1.6; font-size:14px;">
+                            Get monthly insights on visa updates, scholarship opportunities, and success stories.
+                            Plus,
+                            <strong>free downloadable guides</strong> for IELTS, SOP writing, and visa preparation.
+                        </p>
+
+                        <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletterSignup(event)">
+                            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                                <input type="email" name="email" placeholder="Enter your email" required
+                                    style="flex: 1; min-width: 200px; padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white; font-family: inherit; font-size: 14px;"
+                                    onfocus="this.style.borderColor='rgba(59, 130, 246, 0.5)'"
+                                    onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                                <button type="submit" class="btn primary" style="white-space: nowrap;">
+                                    <i class="ph-bold ph-paper-plane-right"></i> Subscribe
+                                </button>
+                            </div>
+                            <div class="newsletter-feedback" id="newsletter-feedback"
+                                style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 13px; font-weight: 600;">
+                            </div>
+                            <p style="margin:12px 0 0 0; font-size:12px; color:var(--muted2);">
+                                ✓ We respect your privacy • ✓ Unsubscribe anytime • ✓ Free resources included
                             </p>
+                        </form>
+                    </div>
 
-                            <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletterSignup(event)">
-                                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                                    <input type="email" name="email" placeholder="Enter your email" required
-                                        style="flex: 1; min-width: 200px; padding: 12px 16px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: white; font-family: inherit; font-size: 14px;"
-                                        onfocus="this.style.borderColor='rgba(59, 130, 246, 0.5)'"
-                                        onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
-                                    <button type="submit" class="btn primary" style="white-space: nowrap;">
-                                        <i class="ph-bold ph-paper-plane-right"></i> Subscribe
-                                    </button>
-                                </div>
-                                <div class="newsletter-feedback" id="newsletter-feedback"
-                                    style="display: none; margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 13px; font-weight: 600;">
-                                </div>
-                                <p style="margin:12px 0 0 0; font-size:12px; color:var(--muted2);">
-                                    ✓ We respect your privacy • ✓ Unsubscribe anytime • ✓ Free resources included
-                                </p>
-                            </form>
-                        </div>
-
-                        <div
-                            style="flex: 0 0 250px; background: rgba(59,130,246,0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(59,130,246,0.2);">
-                            <h4 style="margin:0 0 15px 0; color:var(--accent2); font-size:14px;">Free Resources for
-                                Subscribers</h4>
-                            <ul
-                                style="margin:0; padding:0; list-style:none; font-size:13px; color:var(--muted); line-height:2;">
-                                <li>📋 University Selection Checklist</li>
-                                <li>✍️ SOP Writing Template</li>
-                                <li>💰 Scholarship Database</li>
-                                <li>📊 Cost Comparison Guide</li>
-                                <li>🎤 Visa Interview Tips</li>
-                                <li>🏫 Top 100 Universities List</li>
-                            </ul>
-                        </div>
+                    <div
+                        style="flex: 0 0 250px; background: rgba(59,130,246,0.1); padding: 20px; border-radius: 12px; border: 1px solid rgba(59,130,246,0.2);">
+                        <h4 style="margin:0 0 15px 0; color:var(--accent2); font-size:14px;">Free Resources for
+                            Subscribers</h4>
+                        <ul
+                            style="margin:0; padding:0; list-style:none; font-size:13px; color:var(--muted); line-height:2;">
+                            <li>📋 University Selection Checklist</li>
+                            <li>✍️ SOP Writing Template</li>
+                            <li>💰 Scholarship Database</li>
+                            <li>📊 Cost Comparison Guide</li>
+                            <li>🎤 Visa Interview Tips</li>
+                            <li>🏫 Top 100 Universities List</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- ABOUT -->
-            <section id="about">
-                <div class="section-card">
-                    <h2 style="margin:0 0 10px 0; font-size:22px;">About CNR</h2>
-                    <p style="margin:0; color:var(--muted); line-height:1.75;">
-                        CNR Overseas Education Consultants helps students and families with trusted guidance for Study,
-                        Work,
-                        PR, and MBBS Abroad. With 12+ years of experience and 500+ successful placements, we're
-                        committed to
-                        making global education accessible and affordable.
-                    </p>
-                </div>
-            </section>
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="section-card">
+                <h2 style="margin:0 0 10px 0; font-size:22px;">About CNR</h2>
+                <p style="margin:0; color:var(--muted); line-height:1.75;">
+                    CNR Overseas Education Consultants helps students and families with trusted guidance for Study,
+                    Work,
+                    PR, and MBBS Abroad. With 12+ years of experience and 500+ successful placements, we're
+                    committed to
+                    making global education accessible and affordable.
+                </p>
+            </div>
+        </section>
 
-            <!-- FOOTER -->
-            <footer>
-                <div class="container">
-                    <div class="foot">
-                        <div>
-                            <div style="font-weight:800; color:var(--text); margin-bottom:6px;">CNR Overseas Education
-                                Consultants</div>
-                            <div><i class="ph-fill ph-envelope-simple"></i> <a
-                                    href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a>
-                            </div>
-                            <div>🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a> · 🇮🇳 <a
-                                    href="tel:+918500199988">+91 85001 99988</a></div>
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="foot">
+                    <div>
+                        <div style="font-weight:800; color:var(--text); margin-bottom:6px;">CNR Overseas Education
+                            Consultants</div>
+                        <div><i class="ph-fill ph-envelope-simple"></i> <a
+                                href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a>
                         </div>
-                        <div style="text-align:right;">
-                            <div><i class="ph-fill ph-globe"></i> <a
-                                    href="https://cnr-studyabroadconsultants.com">cnr-studyabroadconsultants.com</a>
-                            </div>
-                            <div style="margin-top:6px;">© <span id="year"></span> CNR. All rights reserved.</div>
+                        <div>🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a> · 🇮🇳 <a
+                                href="tel:+918500199988">+91 85001 99988</a></div>
+                    </div>
+                    <div style="text-align:right;">
+                        <div><i class="ph-fill ph-globe"></i> <a
+                                href="https://cnr-studyabroadconsultants.com">cnr-studyabroadconsultants.com</a>
                         </div>
+                        <div style="margin-top:6px;">© <span id="year"></span> CNR. All rights reserved.</div>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
         </div>
     </main>
 
@@ -946,8 +1004,34 @@
                 if (!el) return;
                 e.preventDefault();
                 smoothScrollToId(id);
+                // if mobile nav is open, close it after navigation
+                const navLinksEl = document.querySelector('.navlinks');
+                const navToggleEl = document.querySelector('.nav-toggle');
+                if (navLinksEl && navLinksEl.classList.contains('show')) {
+                    navLinksEl.classList.remove('show');
+                    if (navToggleEl) navToggleEl.setAttribute('aria-expanded', 'false');
+                }
             });
         });
+
+        // mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinksEl = document.querySelector('.navlinks');
+        if (navToggle && navLinksEl) {
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!expanded));
+                navLinksEl.classList.toggle('show');
+            });
+
+            // close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !navLinksEl.contains(e.target)) {
+                    navLinksEl.classList.remove('show');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
 
         // Handle hash on page load
         if (window.location.hash) {
@@ -956,6 +1040,13 @@
 
         // Form submission with feedback
         const contactForm = document.getElementById('contact-form');
+
+        // track form submissions in Google Analytics
+        function trackEvent(action, label) {
+            if (window.gtag) {
+                gtag('event', action, { 'event_category': 'engagement', 'event_label': label });
+            }
+        }
         const submitBtn = document.getElementById('submit-btn');
         const formFeedback = document.getElementById('form-feedback');
 
@@ -965,6 +1056,7 @@
                 const originalText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="ph-bold ph-spinner-gap"></i> Sending...';
                 submitBtn.style.animation = 'spin 1s linear infinite';
+                trackEvent('contact_form_submitted', 'contact');
             });
         }
 
@@ -1004,6 +1096,7 @@
                 feedbackDiv.style.display = 'block';
                 feedbackDiv.className = 'newsletter-feedback success';
                 feedbackDiv.innerHTML = '✓ Successfully subscribed! Check your email for exclusive resources.';
+                trackEvent('newsletter_subscribed', email);
 
                 // Reset form
                 form.reset();
@@ -1019,6 +1112,33 @@
                 }, 5000);
             }, 1500);
         }
+
+        // EDUCATION NEWS FETCH
+        function loadEducationNews() {
+            const container = document.getElementById('education-news-container');
+            if (!container) return;
+            const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=education+positive&hl=en-US&gl=US&ceid=US:en');
+            const api = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+            fetch(api)
+                .then(r => r.json())
+                .then(data => {
+                    if (data.items) {
+                        data.items.slice(0, 3).forEach(item => {
+                            const card = document.createElement('article');
+                            card.className = 'blog-card';
+                            card.innerHTML = `
+                                <div class="blog-date">${new Date(item.pubDate).toLocaleDateString()}</div>
+                                <h3>${item.title}</h3>
+                                <p>${item.description.replace(/<[^>]*>?/gm, '').slice(0, 120)}...</p>
+                                <a href="${item.link}" target="_blank" class="blog-read-more">Read →</a>
+                            `;
+                            container.appendChild(card);
+                        });
+                    }
+                })
+                .catch(err => console.error('News load failed', err));
+        }
+        document.addEventListener('DOMContentLoaded', loadEducationNews);
 
         // Floating Chat Menu toggle functionality
         function toggleFloatingMenu() {
