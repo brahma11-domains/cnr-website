@@ -480,6 +480,51 @@ section {
     backdrop-filter: blur(10px);
 }
 
+/* Services V2 */
+.services-intro {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 30px;
+}
+
+@media (max-width: 800px) {
+    .services-intro {
+        grid-template-columns: 1fr;
+    }
+}
+
+.prep-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.prep-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.loan-partners {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.loan-badge {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
 .services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
