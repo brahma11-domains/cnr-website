@@ -33,6 +33,7 @@
         rel="stylesheet">
 
     <!-- External CSS -->
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
 
     <!-- Favicon -->
@@ -92,6 +93,11 @@
                         <p>Study • Work • PR • MBBS Abroad</p>
                     </div>
                 </a>
+
+                <!-- mobile menu toggle -->
+                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="ph-fill ph-list"></i>
+                </button>
 
                 <nav class="navlinks" aria-label="Primary navigation">
                     <a href="#destinations">Destinations</a>
@@ -252,6 +258,8 @@
 
                                 <form class="contact-form" action="https://formspree.io/f/xkovrgwg" method="POST"
                                     id="contact-form">
+                                    <!-- honeypot field to deter spam bots; real users won't see it -->
+                                    <input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off">
                                     <div class="form-group">
                                         <label for="form-name">Name</label>
                                         <input type="text" id="form-name" name="name" class="form-control"
@@ -946,8 +954,34 @@
                 if (!el) return;
                 e.preventDefault();
                 smoothScrollToId(id);
+                // if mobile nav is open, close it after navigation
+                const navLinksEl = document.querySelector('.navlinks');
+                const navToggleEl = document.querySelector('.nav-toggle');
+                if (navLinksEl && navLinksEl.classList.contains('show')) {
+                    navLinksEl.classList.remove('show');
+                    if (navToggleEl) navToggleEl.setAttribute('aria-expanded', 'false');
+                }
             });
         });
+
+        // mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinksEl = document.querySelector('.navlinks');
+        if (navToggle && navLinksEl) {
+            navToggle.addEventListener('click', () => {
+                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!expanded));
+                navLinksEl.classList.toggle('show');
+            });
+
+            // close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!navToggle.contains(e.target) && !navLinksEl.contains(e.target)) {
+                    navLinksEl.classList.remove('show');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
 
         // Handle hash on page load
         if (window.location.hash) {
