@@ -6,412 +6,12 @@
     <title>CNR Overseas Education Consultants | Study • Work • PR • MBBS Abroad</title>
     <meta name="description" content="CNR Overseas Education Consultants — Admissions available worldwide. Study, Work, PR, MBBS Abroad. Free counselling, documentation, visa processing, interview training, accommodation assistance."/>
     <meta name="theme-color" content="#081427"/>
-
-    <style>
-        :root{
-          --bg1:#050b14;
-          --bg2:#081a33;
-          --card: rgba(255,255,255,.06);
-          --card2: rgba(255,255,255,.08);
-          --stroke: rgba(255,255,255,.12);
-          --text: rgba(255,255,255,.92);
-          --muted: rgba(255,255,255,.70);
-          --muted2: rgba(255,255,255,.55);
-          --accent:#22c55e;
-          --accent2:#3b82f6;
-          --warn:#f59e0b;
-          --shadow: 0 20px 60px rgba(0,0,0,.45);
-          --radius: 22px;
-        }
-
-        *{box-sizing:border-box}
-        html,body{height:100%}
-        body{
-          margin:0;
-          font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-          color:var(--text);
-          background:
-            radial-gradient(1200px 800px at 70% 20%, rgba(34,197,94,.18), transparent 60%),
-            radial-gradient(900px 700px at 20% 25%, rgba(59,130,246,.22), transparent 55%),
-            linear-gradient(180deg, var(--bg1), var(--bg2));
-          overflow-x:hidden;
-        }
-
-        a{color:inherit; text-decoration:none}
-        .container{max-width:1180px; margin:0 auto; padding:0 20px;}
-
-        /* top info chips */
-        .topbar{
-          position: sticky;
-          top:0;
-          z-index:50;
-          background: linear-gradient(180deg, rgba(5,11,20,.92), rgba(5,11,20,.70));
-          backdrop-filter: blur(10px);
-          border-bottom:1px solid rgba(255,255,255,.06);
-        }
-        .topbar-inner{
-          display:flex;
-          align-items:center;
-          justify-content:space-between;
-          gap:14px;
-          padding:10px 0;
-          flex-wrap:wrap;
-        }
-        .chips{
-          display:flex;
-          gap:10px;
-          align-items:center;
-          flex-wrap:wrap;
-        }
-        .chip{
-          display:inline-flex;
-          align-items:center;
-          gap:10px;
-          padding:8px 12px;
-          border-radius:999px;
-          background: rgba(255,255,255,.05);
-          border:1px solid rgba(255,255,255,.10);
-          font-size:13px;
-          color:var(--muted);
-        }
-        .chip strong{color:var(--text); font-weight:600}
-        .chip .icon{opacity:.9}
-
-        /* Domain badge (requested) */
-        .website-domain{
-          font-size:18px;
-          font-weight:650;
-          color:#e6f1ff;
-          background: rgba(255,255,255,0.06);
-          padding:8px 16px;
-          border-radius: 999px;
-          display:inline-flex;
-          align-items:center;
-          gap:10px;
-          letter-spacing:.2px;
-          backdrop-filter: blur(10px);
-          border:1px solid rgba(255,255,255,.12);
-          white-space:nowrap; /* one line */
-        }
-        .website-domain .globe{opacity:.95}
-
-        /* header / nav */
-        header{
-          padding:18px 0 10px 0;
-        }
-        .nav{
-          display:flex;
-          align-items:center;
-          justify-content:space-between;
-          gap:16px;
-          flex-wrap:wrap;
-        }
-        .brand{
-          display:flex;
-          align-items:center;
-          gap:12px;
-          min-width:260px;
-        }
-        .logo{
-          width:44px;
-          height:44px;
-          border-radius:14px;
-          display:grid;
-          place-items:center;
-          background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(34,197,94,.85));
-          box-shadow: 0 10px 30px rgba(0,0,0,.25);
-          font-weight:800;
-          letter-spacing:.5px;
-        }
-        .brand h1{
-          margin:0;
-          font-size:16px;
-          line-height:1.2;
-        }
-        .brand p{
-          margin:4px 0 0 0;
-          font-size:12.5px;
-          color:var(--muted2);
-        }
-
-        .navlinks{
-          display:flex;
-          align-items:center;
-          gap:18px;
-          flex-wrap:wrap;
-          justify-content:center;
-          padding:10px 0;
-        }
-        .navlinks a{
-          color:var(--muted);
-          font-size:14px;
-          padding:8px 10px;
-          border-radius:12px;
-          transition: all .15s ease;
-        }
-        .navlinks a:hover{
-          background: rgba(255,255,255,.06);
-          color:var(--text);
-        }
-
-        .nav-actions{
-          display:flex;
-          align-items:center;
-          gap:10px;
-          flex-wrap:wrap;
-          justify-content:flex-end;
-        }
-
-        .btn{
-          display:inline-flex;
-          align-items:center;
-          justify-content:center;
-          gap:10px;
-          padding:12px 14px;
-          border-radius:14px;
-          border:1px solid rgba(255,255,255,.12);
-          background: rgba(255,255,255,.06);
-          color:var(--text);
-          font-weight:650;
-          font-size:14px;
-          cursor:pointer;
-          transition: transform .12s ease, background .12s ease, border-color .12s ease;
-          box-shadow: 0 12px 28px rgba(0,0,0,.20);
-        }
-        .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18)}
-        .btn.primary{
-          background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(59,130,246,.75));
-          border-color: rgba(59,130,246,.55);
-        }
-        .btn.whatsapp{
-          background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(34,197,94,.75));
-          border-color: rgba(34,197,94,.55);
-        }
-
-        /* hero grid */
-        main{padding: 14px 0 60px;}
-        .grid{
-          display:grid;
-          grid-template-columns: 1.25fr .85fr;
-          gap:18px;
-          align-items:stretch;
-        }
-        @media (max-width: 980px){
-          .grid{grid-template-columns:1fr}
-        }
-
-        .card{
-          background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
-          border:1px solid rgba(255,255,255,.12);
-          border-radius: var(--radius);
-          box-shadow: var(--shadow);
-          backdrop-filter: blur(14px);
-          overflow:hidden;
-          position:relative;
-        }
-        .card-inner{padding:26px}
-        .kicker{
-          display:inline-flex;
-          align-items:center;
-          gap:10px;
-          padding:8px 12px;
-          border-radius: 999px;
-          background: rgba(245,158,11,.12);
-          border:1px solid rgba(245,158,11,.24);
-          color: #ffd79a;
-          font-weight:650;
-          font-size:13px;
-        }
-        /* If you don't want "Under maintenance" at all, keep this hidden */
-        .kicker.hide {display:none;}
-
-        .hero h2{
-          margin:16px 0 10px 0;
-          font-size:48px;
-          line-height:1.05;
-          letter-spacing:-.8px;
-        }
-        @media (max-width: 520px){
-          .hero h2{font-size:38px}
-        }
-        .hero p{
-          margin: 0 0 18px 0;
-          color: var(--muted);
-          font-size: 15.5px;
-          line-height:1.6;
-          max-width: 52ch;
-        }
-
-        .pill-row{
-          display:flex;
-          flex-wrap:wrap;
-          gap:10px;
-          margin: 14px 0 18px;
-        }
-        .pill{
-          display:inline-flex;
-          align-items:center;
-          gap:8px;
-          padding:8px 10px;
-          border-radius:999px;
-          background: rgba(255,255,255,.05);
-          border:1px solid rgba(255,255,255,.10);
-          color: var(--muted);
-          font-size: 13px;
-        }
-
-        .cta-row{
-          display:flex;
-          flex-wrap:wrap;
-          gap:10px;
-          margin-top: 10px;
-        }
-
-        .divider{
-          height:1px;
-          background: rgba(255,255,255,.10);
-          margin: 18px 0 14px;
-        }
-
-        .mini-contact{
-          display:flex;
-          flex-wrap:wrap;
-          gap:12px;
-          color: var(--muted);
-          font-size: 13px;
-        }
-        .mini-contact a{color:#d9ecff}
-
-        /* right column cards */
-        .right-col{
-          display:flex;
-          flex-direction:column;
-          gap:18px;
-          height:100%;
-        }
-        .section-title{
-          font-size: 14px;
-          color: var(--muted);
-          margin: 0 0 12px 0;
-          letter-spacing: .3px;
-          text-transform: none;
-        }
-        .dest-grid{
-          display:grid;
-          grid-template-columns:1fr 1fr;
-          gap:12px;
-        }
-        @media (max-width: 520px){
-          .dest-grid{grid-template-columns:1fr}
-        }
-        .dest{
-          padding:14px;
-          border-radius: 16px;
-          background: rgba(255,255,255,.05);
-          border:1px solid rgba(255,255,255,.10);
-        }
-        .dest h4{
-          margin:0 0 6px 0;
-          font-size:14px;
-          letter-spacing:.2px;
-        }
-        .dest p{
-          margin:0;
-          font-size:12.5px;
-          color:var(--muted2);
-          line-height:1.45;
-        }
-
-        .helpbox{
-          padding:18px;
-          border-radius: 18px;
-          background: rgba(34,197,94,.08);
-          border:1px solid rgba(34,197,94,.18);
-        }
-        .helpbox h4{margin:0 0 10px 0}
-        .helpbox .row{
-          display:grid;
-          grid-template-columns: 70px 1fr;
-          gap:10px;
-          margin:6px 0;
-          color:var(--muted);
-          font-size:13px;
-          align-items:start;
-        }
-        .helpbox .row strong{color:var(--text); font-weight:650}
-
-        /* sections */
-        section{margin-top: 22px;}
-        .section-card{
-          padding: 22px;
-          border-radius: var(--radius);
-          background: rgba(255,255,255,.04);
-          border: 1px solid rgba(255,255,255,.10);
-          backdrop-filter: blur(10px);
-        }
-
-        .services{
-          display:grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap:12px;
-        }
-        @media (max-width: 980px){ .services{grid-template-columns:1fr 1fr;} }
-        @media (max-width: 520px){ .services{grid-template-columns:1fr;} }
-
-        .svc{
-          padding:16px;
-          border-radius:18px;
-          background: rgba(255,255,255,.05);
-          border: 1px solid rgba(255,255,255,.10);
-        }
-        .svc h3{margin:0 0 8px 0; font-size:15px}
-        .svc p{margin:0; color:var(--muted); font-size:13.5px; line-height:1.55}
-
-        .two-col{
-          display:grid;
-          grid-template-columns: 1.1fr .9fr;
-          gap:12px;
-        }
-        @media (max-width: 980px){ .two-col{grid-template-columns:1fr;} }
-
-        footer{
-          padding: 34px 0 30px;
-          color: var(--muted2);
-          font-size: 13px;
-        }
-        footer .foot{
-          display:flex;
-          justify-content:space-between;
-          gap:14px;
-          flex-wrap:wrap;
-          border-top: 1px solid rgba(255,255,255,.08);
-          padding-top: 18px;
-        }
-
-        /* floating WhatsApp button */
-        .wa-float{
-          position:fixed;
-          right:18px;
-          bottom:18px;
-          z-index:100;
-        }
-        .wa-float a{
-          display:inline-flex;
-          align-items:center;
-          gap:10px;
-          padding:14px 16px;
-          border-radius: 999px;
-          background: linear-gradient(135deg, rgba(34,197,94,.98), rgba(34,197,94,.78));
-          border:1px solid rgba(34,197,94,.55);
-          box-shadow: 0 18px 45px rgba(0,0,0,.35);
-          font-weight:750;
-          color:#06210f;
-        }
-        .wa-float a span{
-          color:#05210e;
-          font-weight:800;
-        }
-    </style>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 
 <body>
@@ -421,14 +21,14 @@
     <div class="container">
         <div class="topbar-inner">
             <div class="chips">
-                <div class="chip"><span class="icon">📧</span><strong>Email:</strong> <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
+                <div class="chip"><i class="ph-fill ph-envelope-simple"></i><strong>Email:</strong> <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
                 <div class="chip"><span class="icon">🇬🇧</span><strong>UK:</strong> <a href="tel:+447774366673">+44 777 43 666 73</a></div>
                 <div class="chip"><span class="icon">🇮🇳</span><strong>IND:</strong> <a href="tel:+917013098218">+91 7013098218</a> | <a href="tel:+918500199988">8500199988</a></div>
             </div>
 
             <!-- Requested: ONE-LINE bigger domain with globe -->
             <a class="website-domain" href="https://cnr-studyabroadconsultants.com" aria-label="Website domain">
-                <span class="globe">🌐</span>
+                <i class="ph-fill ph-globe"></i>
                 <span>cnr-studyabroadconsultants.com</span>
             </a>
         </div>
@@ -458,11 +58,11 @@
             <div class="nav-actions">
                 <a class="btn primary" href="#contact">Free Consultation</a>
 
-                <!-- IMPORTANT: WhatsApp should use India number +91 85001 99988 -->
                 <a class="btn whatsapp"
                    href="https://wa.me/918500199988?text=Hi%20CNR%20Overseas%20Education%20Consultants%2C%20I%20need%20guidance%20for%20Study%2FWork%2FPR%2FMBBS%20abroad."
                    target="_blank" rel="noopener">
-                    WhatsApp
+                   <i class="ph-fill ph-whatsapp-logo"></i>
+                   WhatsApp
                 </a>
             </div>
         </div>
@@ -489,20 +89,20 @@
                     </p>
 
                     <div class="pill-row" aria-label="Key offerings">
-                        <div class="pill">🎓 Study</div>
-                        <div class="pill">💼 Work</div>
-                        <div class="pill">🧭 PR Guidance</div>
-                        <div class="pill">🩺 MBBS Abroad</div>
+                        <div class="pill"><i class="ph-fill ph-graduation-cap"></i> Study</div>
+                        <div class="pill"><i class="ph-fill ph-briefcase"></i> Work</div>
+                        <div class="pill"><i class="ph-fill ph-compass"></i> PR Guidance</div>
+                        <div class="pill"><i class="ph-fill ph-first-aid"></i> MBBS Abroad</div>
                         <div class="pill">🇬🇧 UK • 🇺🇸 USA • 🇨🇦 Canada • 🇦🇺 Australia</div>
                     </div>
 
                     <div class="cta-row">
-                        <a class="btn primary" href="#contact">Get Free Counselling</a>
+                        <a class="btn primary" href="#contact"><i class="ph-bold ph-chats-circle"></i> Get Free Counselling</a>
 
-                        <!-- WhatsApp must be India number -->
                         <a class="btn whatsapp"
                            href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20would%20like%20a%20free%20consultation.%20Please%20guide%20me."
                            target="_blank" rel="noopener">
+                            <i class="ph-fill ph-whatsapp-logo"></i>
                             Chat on WhatsApp
                         </a>
 
@@ -512,17 +112,18 @@
                     <div class="divider"></div>
 
                     <div class="mini-contact">
-                        <span>📧 <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></span>
-                        <span>🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a></span>
-                        <span>🇮🇳 <a href="tel:+918500199988">+91 85001 99988</a></span>
+                        <span><i class="ph-fill ph-envelope-simple"></i> <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></span>
+                        <span><i class="ph-fill ph-phone"></i> 🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a></span>
+                        <span><i class="ph-fill ph-phone"></i> 🇮🇳 <a href="tel:+918500199988">+91 85001 99988</a></span>
                     </div>
                 </div>
             </div>
 
             <!-- RIGHT COLUMN -->
             <div class="right-col">
-                <div class="card">
-                    <div class="card-inner" id="destinations">
+                <!-- Anchor Fix: id moved to container -->
+                <div class="card" id="destinations">
+                    <div class="card-inner">
                         <p class="section-title">Popular Destinations</p>
                         <div class="dest-grid">
                             <div class="dest">
@@ -556,14 +157,13 @@
 
                             <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
                                 <a class="btn primary" href="mailto:contact@cnr-studyabroadconsultants.com?subject=Free%20Consultation%20Request&body=Hi%20CNR%20Team%2C%0A%0AI%20would%20like%20a%20free%20consultation.%20Please%20contact%20me.%0A%0AName%3A%0APhone%3A%0AInterested%20Country%3A%0AService%3A%20Study%2FWork%2FPR%2FMBBS%0A%0AThanks">
-                                    Email Us
+                                    <i class="ph-bold ph-paper-plane-right"></i> Email Us
                                 </a>
 
-                                <!-- WhatsApp must be India number -->
                                 <a class="btn whatsapp"
                                    href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20want%20a%20free%20consultation.%20Please%20contact%20me."
                                    target="_blank" rel="noopener">
-                                    WhatsApp Now
+                                    <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp Now
                                 </a>
                             </div>
 
@@ -587,27 +187,27 @@
 
                 <div class="services">
                     <div class="svc">
-                        <h3>✅ Free Counselling & Admission</h3>
+                        <h3><i class="ph-fill ph-check-circle"></i> Free Counselling</h3>
                         <p>Eligibility check, profile review, country guidance, and next steps planning.</p>
                     </div>
                     <div class="svc">
-                        <h3>🎓 University & Course Selection</h3>
+                        <h3><i class="ph-fill ph-graduation-cap"></i> University Selection</h3>
                         <p>Shortlisting universities & courses based on budget, intake, and requirements.</p>
                     </div>
                     <div class="svc">
-                        <h3>📄 Documentation Support</h3>
+                        <h3><i class="ph-fill ph-file-text"></i> Documentation</h3>
                         <p>Document checklist, applications, SOP guidance, and submission support.</p>
                     </div>
                     <div class="svc">
-                        <h3>🛂 Visa Processing</h3>
+                        <h3><i class="ph-fill ph-passport"></i> Visa Processing</h3>
                         <p>Visa filing guidance, appointment planning, and compliance support.</p>
                     </div>
                     <div class="svc">
-                        <h3>🗣️ Interview Training</h3>
+                        <h3><i class="ph-fill ph-chats-circle"></i> Interview Training</h3>
                         <p>Mock interviews, common questions, confidence-building and best practices.</p>
                     </div>
                     <div class="svc">
-                        <h3>🏠 Accommodation Assistance</h3>
+                        <h3><i class="ph-fill ph-house-line"></i> Accommodation</h3>
                         <p>Support to find safe and suitable accommodation (as per destination norms).</p>
                     </div>
                 </div>
@@ -654,11 +254,11 @@
                 <div class="foot">
                     <div>
                         <div style="font-weight:800; color:var(--text); margin-bottom:6px;">CNR Overseas Education Consultants</div>
-                        <div>📧 <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
+                        <div><i class="ph-fill ph-envelope-simple"></i> <a href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></div>
                         <div>🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a> · 🇮🇳 <a href="tel:+918500199988">+91 85001 99988</a></div>
                     </div>
                     <div style="text-align:right;">
-                        <div>🌐 <a href="https://cnr-studyabroadconsultants.com">cnr-studyabroadconsultants.com</a></div>
+                        <div><i class="ph-fill ph-globe"></i> <a href="https://cnr-studyabroadconsultants.com">cnr-studyabroadconsultants.com</a></div>
                         <div style="margin-top:6px;">© <span id="year"></span> CNR. All rights reserved.</div>
                     </div>
                 </div>
@@ -671,7 +271,7 @@
 <div class="wa-float">
     <a href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%2FWork%2FPR%2FMBBS%20abroad."
        target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-        💬 <span>WhatsApp</span>
+        <i class="ph-fill ph-whatsapp-logo"></i> <span>WhatsApp</span>
     </a>
 </div>
 
@@ -689,9 +289,6 @@
       });
     });
 </script>
-
-<!-- OPTIONAL (Later): Cloudflare Web Analytics (free) - I will guide you when you're ready -->
-<!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"YOUR_TOKEN"}'></script> -->
 
 </body>
 </html>
