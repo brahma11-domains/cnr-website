@@ -72,13 +72,13 @@
     <header>
         <div class="container">
             <div class="nav">
-                <div class="brand">
+                <a href="index.html" class="brand" style="text-decoration:none; color:inherit;">
                     <img src="assets/images/logo.jpeg" alt="CNR Logo" class="logo-img">
                     <div>
                         <h1>CNR Overseas Education Consultants</h1>
                         <p>Study • Work • PR • MBBS Abroad</p>
                     </div>
-                </div>
+                </a>
 
                 <nav class="navlinks" aria-label="Primary navigation">
                     <a href="#destinations">Destinations</a>
@@ -237,20 +237,20 @@
                                     Fill the form below and our experts will contact you within 24 hours.
                                 </p>
 
-                                <form class="contact-form" action="https://formspree.io/f/xkovrgwg" method="POST">
+                                <form class="contact-form" action="https://formspree.io/f/xkovrgwg" method="POST" id="contact-form">
                                     <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                        <label for="form-name">Name</label>
+                                        <input type="text" id="form-name" name="name" class="form-control" placeholder="Your Name"
                                             required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Phone Number</label>
-                                        <input type="tel" name="phone" class="form-control"
+                                        <label for="form-phone">Phone Number</label>
+                                        <input type="tel" id="form-phone" name="phone" class="form-control"
                                             placeholder="+91 XXXXX XXXXX" required>
                                     </div>
                                     <div class="form-group">
-                                        <label>Interested Country</label>
-                                        <select name="country" class="form-control">
+                                        <label for="form-country">Interested Country</label>
+                                        <select id="form-country" name="country" class="form-control">
                                             <option value="UK">United Kingdom</option>
                                             <option value="USA">USA</option>
                                             <option value="Canada">Canada</option>
@@ -259,9 +259,10 @@
                                             <option value="Other">Other</option>
                                         </select>
                                     </div>
-                                    <button type="submit" class="btn primary submit-btn">
+                                    <button type="submit" class="btn primary submit-btn" id="submit-btn">
                                         <i class="ph-bold ph-paper-plane-right"></i> Send Request
                                     </button>
+                                    <div class="form-feedback" id="form-feedback" style="display: none; padding: 12px; border-radius: 8px; font-size: 14px; text-align: center;"></div>
                                 </form>
 
                                 <div
@@ -579,16 +580,53 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Smooth scroll for internal links
+        // Smooth scroll for internal links and hash navigation
+        function smoothScrollToId(id) {
+            const el = document.querySelector(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Handle anchor links on click
         document.querySelectorAll('a[href^="#"]').forEach(a => {
             a.addEventListener('click', (e) => {
                 const id = a.getAttribute('href');
                 const el = document.querySelector(id);
                 if (!el) return;
                 e.preventDefault();
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                smoothScrollToId(id);
             });
         });
+
+        // Handle hash on page load
+        if (window.location.hash) {
+            smoothScrollToId(window.location.hash);
+        }
+
+        // Form submission with feedback
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formFeedback = document.getElementById('form-feedback');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                submitBtn.disabled = true;
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="ph-bold ph-spinner-gap"></i> Sending...';
+                submitBtn.style.animation = 'spin 1s linear infinite';
+            });
+        }
+
+        // Add spinner animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 
 </body>
