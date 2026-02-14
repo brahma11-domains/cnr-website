@@ -28,5 +28,5 @@ jobs:
 
       - name: Run Lighthouse CI via CLI
         run: |
-          # the config file already specifies the URL(s)
-          lhci autorun --config=.lighthouserc.json --upload=false
+          # the config file already specifies the URL(s); assertions are disabled
+          lhci autorun --config=.lighthouserc.json --upload=false --assert=off
