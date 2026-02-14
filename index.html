@@ -1110,27 +1110,41 @@
         function loadBlogPosts() {
             const container = document.getElementById('blog-grid');
             if (!container) return;
-            const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=student+visa+study+abroad+positive&hl=en-US&gl=US&ceid=US:en');
-            const api = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
-            fetch(api)
-                .then(r => r.json())
-                .then(data => {
-                    if (data.items) {
-                        container.innerHTML = '';
-                        data.items.slice(0, 3).forEach(item => {
-                            const card = document.createElement('article');
-                            card.className = 'blog-card';
-                            card.innerHTML = `
-                                <div class="blog-date">${new Date(item.pubDate).toLocaleDateString()}</div>
-                                <h3>${item.title}</h3>
-                                <p>${item.description.replace(/<[^>]*>?/gm, '').slice(0, 120)}...</p>
-                                <a href="${item.link}" target="_blank" class="blog-read-more">Read More →</a>
-                            `;
-                            container.appendChild(card);
-                        });
+            // array of Google News queries (can be RSS URLs too)
+            const queries = [
+                'student+visa+study+abroad+positive',
+                'international+education+jobs+tech+positive',
+                'AI+education+positive',
+                'MBBS+abroad+positive'
+            ];
+
+            const fetches = queries.map(q => {
+                const rssUrl = encodeURIComponent(`https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`);
+                const api = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+                return fetch(api).then(r => r.json()).catch(() => null);
+            });
+
+            Promise.all(fetches).then(results => {
+                let items = [];
+                results.forEach(data => {
+                    if (data && data.items) {
+                        items = items.concat(data.items);
                     }
-                })
-                .catch(err => console.error('Blog load failed', err));
+                });
+                // sort by date descending and pick top 6
+                items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+                items.slice(0, 6).forEach(item => {
+                    const card = document.createElement('article');
+                    card.className = 'blog-card';
+                    card.innerHTML = `
+                        <div class="blog-date">${new Date(item.pubDate).toLocaleDateString()}</div>
+                        <h3>${item.title}</h3>
+                        <p>${item.description.replace(/<[^>]*>?/gm, '').slice(0, 120)}...</p>
+                        <a href="${item.link}" target="_blank" class="blog-read-more">Read More →</a>
+                    `;
+                    container.appendChild(card);
+                });
+            }).catch(err => console.error('Blog feeds failed', err));
         }
         document.addEventListener('DOMContentLoaded', () => {
             loadEducationNews();
