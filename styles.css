@@ -757,6 +757,56 @@ footer .foot {
     padding-top: 18px;
 }
 
+/* Trust Information Section */
+.trust-info {
+    margin-top: 30px;
+    padding: 24px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+}
+
+.trust-header {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.trust-header i {
+    color: var(--accent2);
+    font-size: 20px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.trust-label {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.trust-value {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.5;
+}
+
 /* Scroll to Top Button */
 .scroll-to-top {
     position: fixed;
