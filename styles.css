@@ -922,23 +922,17 @@ footer .foot {
     flex: 1;
 }
 
-.highlight-number {
-    font-size: 28px;
-    font-weight: 800;
+.highlight-title {
+    font-size: 16px;
+    font-weight: 700;
     color: white;
     margin-bottom: 4px;
-    background: linear-gradient(135deg, var(--accent2), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
-.highlight-label {
-    font-size: 12px;
+.highlight-text {
+    font-size: 13px;
     color: var(--muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    line-height: 1.4;
 }
 
 /* Trust/Stats Bar */
