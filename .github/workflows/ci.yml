@@ -25,4 +25,3 @@ jobs:
       - name: Validate HTML files
         run: |
           html-validate "**/*.html"
-
