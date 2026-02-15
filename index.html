@@ -1344,13 +1344,15 @@
             smoothScrollToId(window.location.hash);
         }
 
-        // Cookie banner handling
+        // Cookie banner handling - auto-accept and hide
         const cookieBanner = document.getElementById('cookie-banner');
         const acceptBtn = document.getElementById('cookie-accept');
         if (cookieBanner && acceptBtn) {
-            if (!localStorage.getItem('cookieBannerAccepted')) {
-                cookieBanner.style.display = 'flex';
-            }
+            // Auto-accept cookies on page load
+            localStorage.setItem('cookieBannerAccepted', 'true');
+            cookieBanner.style.display = 'none';
+            
+            // Keep click handler for manual accept
             acceptBtn.addEventListener('click', () => {
                 localStorage.setItem('cookieBannerAccepted', 'true');
                 cookieBanner.style.display = 'none';
