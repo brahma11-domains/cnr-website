@@ -23,7 +23,7 @@ This repository contains a simple static site built with **HTML**, **CSS**, and 
 
 * Clone the repo; open `index.html` in your browser or use the Live Server extension in VS Code.
 * Styles are in `styles.css`; add new rules or components there. A mobile menu example has been added; see the `.nav-toggle` class.
-* JavaScript logic lives in a single `<script>` at the bottom of `index.html` – easy to expand.
+* JavaScript logic has been extracted to `scripts.js` for better maintainability and performance.
 
 ## Next steps (no cost)
 
