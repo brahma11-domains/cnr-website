@@ -4,9 +4,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cnr-studyabroadconsultants.com/" />
+
+    <!-- Primary Meta Tags -->
     <title>CNR Overseas Education Consultants | Study • Work • PR • MBBS Abroad</title>
     <meta name="description"
-        content="Trusted Overseas Education Consultants. We guide you through end-to-end admission and visa processes for UK, USA, Canada, Australia, and MBBS Abroad. 100% Transparency." />
+        content="Trusted Overseas Education Consultants. We guide you through end-to-end admission and visa processes for UK, USA, Canada, Australia, and MBBS Abroad. 100% Transparency. 98% visa success rate." />
+    <meta name="keywords" content="study abroad consultants, overseas education, MBBS abroad, study in UK, study in USA, study in Canada, study in Australia, student visa, education consultants" />
+    <meta name="author" content="CNR Overseas Education Consultants" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -26,9 +34,15 @@
 
     <meta name="theme-color" content="#081427" />
 
-    <!-- Google Fonts -->
+    <!-- Performance: Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.rss2json.com">
+    <link rel="dns-prefetch" href="https://news.google.com">
+    <link rel="dns-prefetch" href="https://embed.tawk.to">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
@@ -46,12 +60,24 @@
     <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
 
     <!-- Google Analytics (GA4) - UPDATE WITH YOUR ACTUAL GA4 MEASUREMENT ID -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Initialize with consent mode - analytics_storage denied by default -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            'analytics_storage': 'denied',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+        });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        gtag('config', 'G-XXXXXXXXXX', {
+            'anonymize_ip': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
     </script>
 
     <!-- Phosphor Icons -->
@@ -61,15 +87,101 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "EducationalOrganization",
       "name": "CNR Overseas Education Consultants",
       "url": "https://cnr-studyabroadconsultants.com",
       "logo": "https://cnr-studyabroadconsultants.com/assets/images/logo.jpeg",
+      "description": "Trusted Overseas Education Consultants providing guidance for Study Abroad, Work, PR, and MBBS programs in UK, USA, Canada, Australia, and more.",
+      "telephone": "+91 85001 99988",
+      "email": "contact@cnr-studyabroadconsultants.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "UPDATE_WITH_ADDRESS",
+        "addressLocality": "UPDATE_WITH_CITY",
+        "addressRegion": "UPDATE_WITH_STATE",
+        "postalCode": "UPDATE_WITH_PINCODE",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "UPDATE_WITH_LATITUDE",
+        "longitude": "UPDATE_WITH_LONGITUDE"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "500",
+        "bestRating": "5"
+      },
       "sameAs": [
-        "https://www.facebook.com/yourpage",
-        "https://www.instagram.com/yourprofile",
-        "https://www.linkedin.com/company/yourcompany"
-        <!-- UPDATE WITH YOUR ACTUAL SOCIAL MEDIA LINKS -->
+        "https://www.facebook.com/UPDATE_WITH_FACEBOOK_PAGE",
+        "https://www.instagram.com/UPDATE_WITH_INSTAGRAM_PROFILE",
+        "https://www.linkedin.com/company/UPDATE_WITH_LINKEDIN_PAGE",
+        "https://twitter.com/UPDATE_WITH_TWITTER_HANDLE"
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does CNR Overseas Education Consultants provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We provide comprehensive study abroad services including university selection, application processing, visa assistance, interview preparation, accommodation support, and education loan guidance. We specialize in helping students study in UK, USA, Canada, Australia, Europe, and pursue MBBS abroad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do your consultation services cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer free initial counselling to assess your profile and discuss study options. Our comprehensive service packages are competitively priced and transparent. Contact us for detailed information about our service fees for your specific requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which countries do you help students study in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We help students study in multiple countries including UK, USA, Canada, Australia, Germany, France, Ireland, Poland, Dubai, Singapore, New Zealand, Switzerland, Malta, Latvia, Lithuania, and many more. We also specialize in MBBS programs abroad."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your visa success rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We maintain a 98% visa success rate across all countries. Our experienced team provides comprehensive visa guidance, documentation review, and interview preparation to maximize your chances of visa approval."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide test preparation coaching?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide expert coaching for IELTS, TOEFL, PTE, GRE, and Duolingo English Test. Our experienced trainers help you maximize your scores through personalized coaching and practice materials."
+          }
+        }
       ]
     }
     </script>
@@ -90,12 +202,21 @@
 
 <body>
 
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- COOKIE / PRIVACY BANNER -->
-    <div id="cookie-banner" class="cookie-banner">
-        <p>We use cookies and similar technologies to enhance your experience, analyze traffic, and provide our chat
-            service. By continuing to use this site you agree to our <a href="privacy-policy.html" id="privacy-link">Privacy Policy</a>.
-        </p>
-        <button id="cookie-accept" class="btn primary" aria-label="Accept cookies">Accept</button>
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title" aria-live="polite">
+        <div class="cookie-content">
+            <h3 id="cookie-banner-title">🍪 Cookie Consent</h3>
+            <p>We use cookies and similar technologies to enhance your experience, analyze traffic, and provide our chat
+                service. By continuing to use this site you agree to our <a href="privacy-policy.html" id="privacy-link">Privacy Policy</a>.
+            </p>
+        </div>
+        <div class="cookie-actions">
+            <button id="cookie-decline" class="btn" aria-label="Decline cookies">Decline</button>
+            <button id="cookie-accept" class="btn primary" aria-label="Accept cookies">Accept</button>
+        </div>
     </div>
 
     <!-- TOP BAR -->
@@ -164,7 +285,7 @@
     </header>
 
     <!-- MAIN -->
-    <main>
+    <main id="main-content">
         <div class="container">
             <div class="grid">
 
