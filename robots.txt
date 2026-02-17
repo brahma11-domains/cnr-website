@@ -1,0 +1,14 @@
+# Robots.txt for CNR Overseas Education Consultants
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Disallow certain directories if needed
+Disallow: /assets/
+Disallow: /*.backup$
+
+# Sitemap location
+Sitemap: https://cnr-studyabroadconsultants.com/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
