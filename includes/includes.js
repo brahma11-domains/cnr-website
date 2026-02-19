@@ -1,47 +1,57 @@
-// /includes/includes.js
 (async function () {
-    async function loadInto(selector, url) {
-        const el = document.querySelector(selector);
-        if (!el) return;
+  // Decide relative prefix for fetching include files
+  // - index.html at root: "" => "includes/header.html"
+  // - /pages/*.html: "../" => "../includes/header.html"
+  const isPagesFolder = window.location.pathname.includes('/pages/');
+  const prefix = isPagesFolder ? '../' : '';
 
-        const res = await fetch(url, { cache: "no-cache" });
-        if (!res.ok) {
-            console.error("Include failed:", url, res.status);
-            return;
-        }
-        el.innerHTML = await res.text();
+  async function loadInto(id, file) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const res = await fetch(prefix + 'includes/' + file);
+    if (!res.ok) {
+      el.innerHTML = `<div style="padding:12px; border:1px solid rgba(255,255,255,0.1); border-radius:10px; color:#fff;">
+        Failed to load ${file} (${res.status}). Check includes path.
+      </div>`;
+      return;
     }
+    el.innerHTML = await res.text();
+  }
 
-    function wireMobileMenu() {
-        const navToggle = document.querySelector(".nav-toggle");
-        const navLinksEl = document.querySelector(".navlinks");
-        if (!navToggle || !navLinksEl) return;
+  await loadInto('site-header', 'header.html');
+  await loadInto('site-footer', 'footer.html');
 
-        navToggle.addEventListener("click", () => {
-            const expanded = navToggle.getAttribute("aria-expanded") === "true";
-            navToggle.setAttribute("aria-expanded", String(!expanded));
-            navLinksEl.classList.toggle("show");
-        });
+  // Set footer year (after footer is injected)
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        document.addEventListener("click", (e) => {
-            if (!navToggle.contains(e.target) && !navLinksEl.contains(e.target)) {
-                navLinksEl.classList.remove("show");
-                navToggle.setAttribute("aria-expanded", "false");
-            }
-        });
-    }
-
-    function setYear() {
-        const year = document.getElementById("year");
-        if (year) year.textContent = new Date().getFullYear();
-    }
-
-    document.addEventListener("DOMContentLoaded", async () => {
-        // IMPORTANT: absolute paths so it works from /pages/* too
-        await loadInto("#site-header", "/includes/header.html");
-        await loadInto("#site-footer", "/includes/footer.html");
-
-        wireMobileMenu();
-        setYear();
+  // Mobile menu toggle (after header is injected)
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinksEl = document.querySelector('.navlinks');
+  if (navToggle && navLinksEl) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinksEl.classList.toggle('show');
     });
+
+    document.addEventListener('click', (e) => {
+      if (!navToggle.contains(e.target) && !navLinksEl.contains(e.target)) {
+        navLinksEl.classList.remove('show');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Cookie banner handling (NO auto-accept)
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  if (cookieBanner && acceptBtn) {
+    const accepted = localStorage.getItem('cookieBannerAccepted') === 'true';
+    cookieBanner.style.display = accepted ? 'none' : 'block';
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieBannerAccepted', 'true');
+      cookieBanner.style.display = 'none';
+    });
+  }
 })();

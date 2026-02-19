@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>CNR Overseas Education Consultants | Study • Work • PR • MBBS Abroad</title>
-
     <meta name="description"
-        content="Trusted Overseas Education Consultants. We guide you end-to-end for admissions, visa, and accommodation for UK, USA, Canada, Australia, Europe and MBBS Abroad." />
+        content="Trusted Overseas Education Consultants. We guide you through end-to-end admission and visa processes for UK, USA, Canada, Australia, and MBBS Abroad. 100% Transparency." />
 
-    <!-- Open Graph -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cnr-studyabroadconsultants.com/">
     <meta property="og:title" content="CNR Overseas Education Consultants | Your Gateway to Global Education">
@@ -29,28 +27,22 @@
     <meta name="theme-color" content="#081427" />
     <link rel="canonical" href="https://cnr-studyabroadconsultants.com/">
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- External CSS -->
     <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <!-- Favicon / Touch Icons (keep files if you have them; otherwise it’s safe to remove these) -->
+    <!-- Favicon & touch icons -->
     <link rel="icon" href="assets/images/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="180x180">
     <link rel="icon" href="assets/images/logo.jpeg" type="image/jpeg">
 
-    <!-- Google Site Verification (optional) -->
-    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
-
-    <!-- GA4 (replace with your id) -->
+    <!-- Google Analytics (GA4) - UPDATE WITH YOUR ACTUAL GA4 MEASUREMENT ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -59,23 +51,26 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
 
-    <!-- Organization schema -->
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Business schema (Organization) -->
     <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"CNR Overseas Education Consultants",
-    "url":"https://cnr-studyabroadconsultants.com",
-    "logo":"https://cnr-studyabroadconsultants.com/assets/images/logo.jpeg",
-    "sameAs":[
-      "https://www.facebook.com/",
-      "https://www.instagram.com/",
-      "https://www.linkedin.com/"
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CNR Overseas Education Consultants",
+    "url": "https://cnr-studyabroadconsultants.com",
+    "logo": "https://cnr-studyabroadconsultants.com/assets/images/logo.jpeg",
+    "sameAs": [
+      "https://www.facebook.com/yourpage",
+      "https://www.instagram.com/yourprofile",
+      "https://www.linkedin.com/company/yourcompany"
     ]
   }
   </script>
 
-    <!-- Tawk.to (keep if you already use it) -->
+    <!-- Tawk.to Live Chat -->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
@@ -91,31 +86,17 @@
 
 <body>
 
-    <!-- Cookie Banner -->
-    <div id="cookie-banner" class="cookie-banner" style="display:none;">
-        <p>
-            We use cookies and similar technologies to enhance your experience, analyze traffic, and provide our chat
-            service.
-            By continuing to use this site you agree to our
-            <a href="privacy-policy.html" id="privacy-link">Privacy Policy</a>.
-        </p>
-        <button id="cookie-accept" class="btn primary" aria-label="Accept cookies">Accept</button>
-    </div>
-
-    <!-- ✅ Shared Header Injected Here -->
+    <!-- Shared Header Injected Here -->
     <div id="site-header"></div>
 
+    <!-- MAIN -->
     <main>
-
-        <!-- HERO + GRID -->
         <div class="container">
             <div class="grid">
-
-                <!-- LEFT HERO -->
+                <!-- HERO -->
                 <div class="card hero">
                     <div class="card-inner">
                         <h2>Admissions Available Worldwide.</h2>
-
                         <p>
                             We help students and families with a clear, guided process for <strong>Study Abroad</strong>
                             —
@@ -140,8 +121,9 @@
                             <a class="btn whatsapp"
                                 href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%2FWork%2FPR%2FMBBS%20abroad."
                                 target="_blank" rel="noopener"
-                                onclick="gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_hero'});">
-                                <i class="ph-fill ph-whatsapp-logo"></i> Chat on WhatsApp
+                                onclick="if(window.gtag){gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_contact'});}">
+                                <i class="ph-fill ph-whatsapp-logo"></i>
+                                Chat on WhatsApp
                             </a>
 
                             <a class="btn" href="#services">View Services</a>
@@ -178,7 +160,7 @@
                 <!-- RIGHT COLUMN -->
                 <div class="right-col">
 
-                    <!-- DESTINATIONS -->
+                    <!-- Destinations -->
                     <div class="card" id="destinations">
                         <div class="card-inner">
                             <p class="section-title">Where We Can Take You</p>
@@ -190,66 +172,66 @@
                             </div>
 
                             <div class="dest-grid">
-                                <a class="dest-card" href="pages/study-in-uk.html" style="text-decoration:none;">
+                                <div class="dest-card">
                                     <img src="assets/images/uk.png" alt="Study in UK" loading="lazy">
                                     <div class="dest-overlay">
                                         <h4>🇬🇧 United Kingdom</h4>
                                         <p>Top Universities • Post-Study Work</p>
                                     </div>
-                                </a>
-
-                                <a class="dest-card" href="pages/study-in-usa.html" style="text-decoration:none;">
+                                </div>
+                                <div class="dest-card">
                                     <img src="assets/images/usa.png" alt="Study in USA" loading="lazy">
                                     <div class="dest-overlay">
                                         <h4>🇺🇸 United States</h4>
                                         <p>Ivy Leagues • STEM OPT</p>
                                     </div>
-                                </a>
-
-                                <a class="dest-card" href="pages/study-in-canada.html" style="text-decoration:none;">
+                                </div>
+                                <div class="dest-card">
                                     <img src="assets/images/canada.png" alt="Study in Canada" loading="lazy">
                                     <div class="dest-overlay">
                                         <h4>🇨🇦 Canada</h4>
                                         <p>PR Pathways • Quality Life</p>
                                     </div>
-                                </a>
-
-                                <a class="dest-card" href="pages/study-in-australia.html" style="text-decoration:none;">
+                                </div>
+                                <div class="dest-card">
                                     <img src="assets/images/australia.png" alt="Study in Australia" loading="lazy">
                                     <div class="dest-overlay">
                                         <h4>🇦🇺 Australia</h4>
                                         <p>Group of 8 • Work Rights</p>
                                     </div>
-                                </a>
-
-                                <a class="dest-card" href="pages/study-destinations.html#destinations-form"
-                                    style="text-decoration:none;">
+                                </div>
+                                <div class="dest-card">
                                     <img src="assets/images/europe.png" alt="Study in Europe" loading="lazy">
                                     <div class="dest-overlay">
                                         <h4>🇪🇺 Europe</h4>
                                         <p>Germany • France • Ireland • Poland</p>
                                     </div>
-                                </a>
-
-                                <a class="dest-card" href="pages/study-destinations.html#destinations-form"
-                                    style="text-decoration:none;">
+                                </div>
+                                <div class="dest-card">
                                     <img src="assets/images/dubai.png" alt="Study in Dubai" loading="lazy">
                                     <div class="dest-overlay">
                                         <h4>🇦🇪 Middle East & More</h4>
                                         <p>Dubai • Singapore • N. Ireland</p>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top:16px; text-align:center;">
+                                <a class="btn" href="pages/study-in-uk.html"
+                                    style="display:inline-flex; align-items:center; gap:8px;">
+                                    Study in UK <i class="ph-bold ph-arrow-right"></i>
                                 </a>
                             </div>
 
                             <div
                                 style="margin-top:15px; padding:12px; background:rgba(255,255,255,0.05); border-radius:12px; font-size:13px; color:var(--muted); line-height:1.6;">
                                 <strong>Also admitting for:</strong> New Zealand, Switzerland, Malta, Latvia, Lithuania,
-                                and more destinations.
+                                and many more global destinations.
                             </div>
                         </div>
                     </div>
 
-                    <!-- CONTACT -->
+                    <!-- Contact -->
                     <div class="card" id="contact">
                         <div class="card-inner">
                             <div class="helpbox">
@@ -262,7 +244,6 @@
                                     id="contact-form">
                                     <input type="text" name="company" style="display:none" tabindex="-1"
                                         autocomplete="off">
-                                    <input type="hidden" name="source" value="Home Page">
 
                                     <div class="form-group">
                                         <label for="form-name">Name</label>
@@ -283,7 +264,6 @@
                                             <option value="USA">USA</option>
                                             <option value="Canada">Canada</option>
                                             <option value="Australia">Australia</option>
-                                            <option value="Europe">Europe</option>
                                             <option value="MBBS">MBBS Abroad</option>
                                             <option value="Other">Other</option>
                                         </select>
@@ -294,7 +274,7 @@
                                     </button>
 
                                     <div class="form-feedback" id="form-feedback"
-                                        style="display:none; padding:12px; border-radius:8px; font-size:14px; text-align:center;">
+                                        style="display: none; padding: 12px; border-radius: 8px; font-size: 14px; text-align: center;">
                                     </div>
                                 </form>
 
@@ -306,26 +286,15 @@
                                                 href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a></span>
                                     </div>
                                     <div class="row">
-                                        <strong><i class="ph-fill ph-phone"></i> UK:</strong>
-                                        <span><a href="tel:+447774366673">+44 777 43 666 73</a></span>
-                                    </div>
-                                    <div class="row">
-                                        <strong><i class="ph-fill ph-phone"></i> India:</strong>
-                                        <span><a href="tel:+917013098218">+91 7013098218</a> | <a
-                                                href="tel:+918500199988">+91 85001 99988</a></span>
-                                    </div>
-                                    <div class="row">
                                         <strong><i class="ph-fill ph-whatsapp-logo"></i> WhatsApp:</strong>
                                         <span>
                                             <a href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%2FWork%2FPR%2FMBBS%20abroad."
-                                                target="_blank" rel="noopener"
-                                                onclick="gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_contact_card'});">
+                                                onclick="if(window.gtag){gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_contact'});}">
                                                 +91 85001 99988
                                             </a>
                                         </span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -339,27 +308,26 @@
             <div class="container">
                 <div class="section-card">
                     <h2 style="margin:0 0 12px 0; font-size:22px;">How We Work</h2>
-
                     <div class="process-steps">
                         <div class="step-card">
                             <div class="step-num">01</div>
                             <h4>Counselling</h4>
-                            <p>We analyze your profile, goals, and budget to find the best options.</p>
+                            <p>We analyze your profile, interests, and budget to find the perfect university match.</p>
                         </div>
                         <div class="step-card">
                             <div class="step-num">02</div>
-                            <h4>Shortlisting</h4>
-                            <p>We shortlist universities and courses aligned with your profile.</p>
+                            <h4>Application</h4>
+                            <p>Our team handles your application, SOPs, and LORs to ensure error-free submission.</p>
                         </div>
                         <div class="step-card">
                             <div class="step-num">03</div>
-                            <h4>Applications</h4>
-                            <p>We support SOP/LOR, documentation and error-free submission.</p>
+                            <h4>Visa Filing</h4>
+                            <p>Expert guidance on financial documentation and visa interview mock sessions.</p>
                         </div>
                         <div class="step-card">
                             <div class="step-num">04</div>
-                            <h4>Visa & Fly ✈️</h4>
-                            <p>Visa guidance + pre-departure and accommodation support.</p>
+                            <h4>Fly! ✈️</h4>
+                            <p>Pre-departure briefing, currency exchange, and accommodation assistance.</p>
                         </div>
                     </div>
                 </div>
@@ -372,953 +340,118 @@
                 <div class="section-card">
                     <h2 style="margin:0 0 12px 0; font-size:22px;">Comprehensive Services</h2>
                     <p style="margin:0 0 25px 0; color:var(--muted); line-height:1.65;">
-                        End-to-end overseas education support — from profile evaluation to landing in your dream
-                        country.
+                        End-to-end overseas education support — from profile analysis to landing in your dream country.
                     </p>
 
-                    <div class="services-intro">
-                        <div>
-                            <div class="services" style="grid-template-columns: repeat(2, 1fr);">
-                                <div class="svc">
-                                    <h3><i class="ph-fill ph-check-circle"></i> Free Counselling</h3>
-                                    <p>Eligibility check, profile review, country guidance & planning.</p>
-                                </div>
-
-                                <div class="svc">
-                                    <h3><i class="ph-fill ph-graduation-cap"></i> University Selection</h3>
-                                    <p>Shortlisting universities & courses based on budget, intake & goals.</p>
-                                </div>
-
-                                <div class="svc">
-                                    <h3><i class="ph-fill ph-file-text"></i> Documentation</h3>
-                                    <p>SOP assistance, LOR guidance, and error-free application filing.</p>
-                                </div>
-
-                                <div class="svc">
-                                    <h3><i class="ph-fill ph-passport"></i> Visa Filing</h3>
-                                    <p>Visa guidance, financial docs review, interview preparation & compliance.</p>
-                                </div>
-
-                                <div class="svc">
-                                    <h3><i class="ph-fill ph-chats-circle"></i> Interview Training</h3>
-                                    <p>Mock interviews to build confidence for university & visa rounds.</p>
-                                </div>
-
-                                <div class="svc">
-                                    <h3><i class="ph-fill ph-house-line"></i> Accommodation</h3>
-                                    <p>Assistance finding on-campus/off-campus housing before you fly.</p>
-                                </div>
-                            </div>
+                    <div class="services" style="grid-template-columns: repeat(2, 1fr);">
+                        <div class="svc">
+                            <h3><i class="ph-fill ph-check-circle"></i> Free Counselling</h3>
+                            <p>Eligibility check, profile review, country guidance & career planning.</p>
                         </div>
-
-                        <div>
-                            <div class="prep-card">
-                                <h4 style="color:var(--accent);"><i class="ph-fill ph-chalkboard-teacher"></i> Test Prep
-                                    & Coaching</h4>
-                                <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">Coaching to improve
-                                    your chances & scores.</p>
-                                <div class="pill-row" style="margin:0;">
-                                    <span class="pill">IELTS</span>
-                                    <span class="pill">TOEFL</span>
-                                    <span class="pill">PTE</span>
-                                    <span class="pill">GRE</span>
-                                    <span class="pill">Duolingo</span>
-                                </div>
-                            </div>
-
-                            <div class="prep-card">
-                                <h4 style="color:#22c55e;"><i class="ph-fill ph-bank"></i> Education Loans</h4>
-                                <p style="font-size:13px; color:var(--muted); margin-bottom:12px;">
-                                    Quick education loan support through leading partners.
-                                </p>
-                                <div class="loan-partners">
-                                    <div class="loan-badge">HDFC Credila</div>
-                                    <div class="loan-badge">Avanse</div>
-                                    <div class="loan-badge">InCred</div>
-                                    <div class="loan-badge">Auxilo / IDFC</div>
-                                </div>
-                            </div>
+                        <div class="svc">
+                            <h3><i class="ph-fill ph-graduation-cap"></i> University Selection</h3>
+                            <p>Shortlisting universities & courses based on budget and intake.</p>
                         </div>
-
-                    </div><!-- /services-intro -->
-                </div>
-            </div>
-        </section>
-
-        <!-- SUCCESS STATS (for animation) -->
-        <section id="success-stats">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 20px 0; font-size:22px; text-align:center;">Our Success Story</h2>
-                    <p style="margin:0 0 30px 0; color:var(--muted); line-height:1.65; text-align:center;">
-                        Trusted by 500+ students across 10+ countries with a high visa success rate.
-                    </p>
-
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="ph-fill ph-graduation-cap"></i></div>
-                            <div class="stat-number" data-target="500" data-suffix="+">0</div>
-                            <div class="stat-label">Students Placed</div>
+                        <div class="svc">
+                            <h3><i class="ph-fill ph-file-text"></i> Documentation</h3>
+                            <p>SOP assistance, LOR guidance, and error-free application filing.</p>
                         </div>
-
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="ph-fill ph-check-circle"></i></div>
-                            <div class="stat-number" data-target="98" data-suffix="%">0</div>
-                            <div class="stat-label">Visa Success</div>
+                        <div class="svc">
+                            <h3><i class="ph-fill ph-passport"></i> Visa Filing</h3>
+                            <p>Visa guidance, financial documentation review, and compliance.</p>
                         </div>
-
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="ph-fill ph-globe"></i></div>
-                            <div class="stat-number" data-target="10" data-suffix="+">0</div>
-                            <div class="stat-label">Countries</div>
+                        <div class="svc">
+                            <h3><i class="ph-fill ph-chats-circle"></i> Interview Training</h3>
+                            <p>Mock interviews to build confidence for university & visa rounds.</p>
                         </div>
-
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="ph-fill ph-star"></i></div>
-                            <div class="stat-number" data-target="12" data-suffix="+">0</div>
-                            <div class="stat-label">Years Experience</div>
+                        <div class="svc">
+                            <h3><i class="ph-fill ph-house-line"></i> Accommodation</h3>
+                            <p>Assistance finding on-campus or off-campus housing before you fly.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TESTIMONIALS -->
-        <section id="testimonials">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 20px 0; font-size:22px;">Student Success Stories</h2>
-                    <p style="margin:0 0 25px 0; color:var(--muted); line-height:1.65; text-align:center;">
-                        Real stories from students who transformed their future with CNR.
-                    </p>
-
-                    <div class="testi-grid">
-                        <div class="testi-card">
-                            <div style="display:flex; gap:8px; margin-bottom:12px;">
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                            </div>
-                            <p
-                                style="margin:0 0 15px 0; color:var(--muted); font-size:13px; line-height:1.6; font-style:italic;">
-                                "CNR guided me perfectly through the entire admission process. Got into my dream
-                                university in Australia."
-                            </p>
-                            <div
-                                style="display:flex; align-items:center; gap:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.08);">
-                                <div class="testi-avatar"
-                                    style="background: linear-gradient(135deg, #3b82f6, #1d4ed8);">HG</div>
-                                <div style="flex:1;">
-                                    <div style="font-weight:600; font-size:14px;">Hemitha G.</div>
-                                    <div style="font-size:12px; color:var(--muted2);">🇦🇺 Australia</div>
-                                </div>
-                                <div class="success-badge">Admission Secured</div>
-                            </div>
-                        </div>
-
-                        <div class="testi-card">
-                            <div style="display:flex; gap:8px; margin-bottom:12px;">
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                            </div>
-                            <p
-                                style="margin:0 0 15px 0; color:var(--muted); font-size:13px; line-height:1.6; font-style:italic;">
-                                "From application to offer letter, CNR made everything seamless. Highly professional
-                                team!"
-                            </p>
-                            <div
-                                style="display:flex; align-items:center; gap:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.08);">
-                                <div class="testi-avatar"
-                                    style="background: linear-gradient(135deg, #22c55e, #15803d);">AD</div>
-                                <div style="flex:1;">
-                                    <div style="font-weight:600; font-size:14px;">Archana D.</div>
-                                    <div style="font-size:12px; color:var(--muted2);">🇦🇺 Australia</div>
-                                </div>
-                                <div class="success-badge">Admission Secured</div>
-                            </div>
-                        </div>
-
-                        <div class="testi-card">
-                            <div style="display:flex; gap:8px; margin-bottom:12px;">
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                                <i class="ph-fill ph-star" style="color:#fbbf24;"></i>
-                            </div>
-                            <p
-                                style="margin:0 0 15px 0; color:var(--muted); font-size:13px; line-height:1.6; font-style:italic;">
-                                "Got admission to the UK. CNR helped with every document and made the process
-                                stress-free."
-                            </p>
-                            <div
-                                style="display:flex; align-items:center; gap:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,0.08);">
-                                <div class="testi-avatar"
-                                    style="background: linear-gradient(135deg, #f59e0b, #d97706);">SD</div>
-                                <div style="flex:1;">
-                                    <div style="font-weight:600; font-size:14px;">Shushrutha D.</div>
-                                    <div style="font-size:12px; color:var(--muted2);">🇬🇧 UK</div>
-                                </div>
-                                <div class="success-badge">Admission Secured</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="margin-top:16px; text-align:center;">
-                        <a class="btn" href="#contact"><i class="ph-bold ph-chats-circle"></i> Talk to a Counsellor</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MBBS -->
-        <section id="mbbs">
-            <div class="container">
-                <div class="mbbs-card">
-                    <div class="mbbs-banner">
-                        <div class="mbbs-banner-overlay"
-                            style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(2,44,34,0.92) 0%, rgba(2,44,34,0.55) 100%);">
-                        </div>
-
-                        <div
-                            style="position:relative; z-index:10; padding:30px; height:100%; display:flex; flex-direction:column; justify-content:center;">
-                            <span class="mbbs-badge">🩺 Medical Education Wing</span>
-                            <h2 style="font-size:32px; margin:0 0 10px 0; max-width:650px;">MBBS Abroad: Become a Global
-                                Doctor</h2>
-                            <p style="font-size:16px; color:#dcfce7; max-width:600px; line-height:1.6;">
-                                Direct admissions to recognized universities. Low tuition fees, English medium, and
-                                guidance from start to finish.
-                            </p>
-
-                            <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
-                                <div
-                                    style="display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); padding:8px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.2);">
-                                    <i class="ph-fill ph-check-circle" style="color:#22c55e;"></i> <span>NMC/WHO
-                                        Approved</span>
-                                </div>
-                                <div
-                                    style="display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); padding:8px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.2);">
-                                    <i class="ph-fill ph-check-circle" style="color:#22c55e;"></i> <span>English
-                                        Medium</span>
-                                </div>
-                                <div
-                                    style="display:flex; align-items:center; gap:8px; background:rgba(255,255,255,0.1); padding:8px 14px; border-radius:8px; border:1px solid rgba(255,255,255,0.2);">
-                                    <i class="ph-fill ph-check-circle" style="color:#22c55e;"></i> <span>Transparent
-                                        Guidance</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mbbs-content">
-                        <div class="mbbs-grid">
-                            <div>
-                                <h3 style="margin:0 0 14px 0; font-size:20px; color:#22c55e;">Popular MBBS Destinations
-                                </h3>
-                                <div
-                                    style="display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:12px;">
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇷🇺 Russia</div>
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇬🇪 Georgia</div>
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇰🇿 Kazakhstan</div>
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇰🇬 Kyrgyzstan</div>
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇵🇭 Philippines</div>
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇪🇬 Egypt</div>
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇺🇿 Uzbekistan</div>
-                                    <div
-                                        style="background:rgba(255,255,255,0.05); padding:10px; border-radius:8px; text-align:center; border:1px solid rgba(255,255,255,0.1);">
-                                        🇦🇲 Armenia</div>
-                                </div>
-
-                                <p style="margin-top:14px; font-size:13px; color:#a7f3d0; line-height:1.6;">
-                                    We support eligibility checks, university selection, documentation, visa guidance,
-                                    and pre-departure assistance.
-                                </p>
-                            </div>
-
-                            <div
-                                style="background:rgba(6,50,30,0.6); padding:20px; border-radius:12px; border:1px solid rgba(34,197,94,0.3);">
-                                <h4 style="margin:0 0 12px 0; color:white;">MBBS Support Includes</h4>
-                                <ul
-                                    style="margin:0; padding:0; list-style:none; color:#dcfce7; font-size:14px; line-height:1.8;">
-                                    <li>✅ Country & University Shortlisting</li>
-                                    <li>✅ Admissions & Documentation</li>
-                                    <li>✅ Visa Guidance & Travel Support</li>
-                                    <li>✅ Pre-departure Briefing</li>
-                                    <li>✅ Accommodation Guidance</li>
-                                </ul>
-
-                                <a class="btn" href="#contact"
-                                    style="width:100%; margin-top:15px; background:#22c55e; color:#022c22; border:none; justify-content:center;">
-                                    <i class="ph-bold ph-stethoscope"></i> Enquire for MBBS
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- BOOK APPOINTMENT -->
-        <section id="book-appointment">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 12px 0; font-size:22px;">Book an Appointment</h2>
-                    <p style="margin:0 0 18px 0; color:var(--muted); line-height:1.65;">
-                        Prefer a call? Choose a time and we’ll guide you based on your profile and target destination.
-                    </p>
-
-                    <div class="process-steps">
-                        <div class="step-card">
-                            <div class="step-num">A</div>
-                            <h4>Share Your Goal</h4>
-                            <p>Study / Work / PR / MBBS</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-num">B</div>
-                            <h4>Get a Plan</h4>
-                            <p>Shortlist + timelines + budget</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-num">C</div>
-                            <h4>Start Process</h4>
-                            <p>Docs + applications + visa</p>
-                        </div>
-                    </div>
-
-                    <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
-                        <a class="btn primary" href="#contact"><i class="ph-bold ph-calendar-check"></i> Request a
-                            Callback</a>
-                        <a class="btn whatsapp"
-                            href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20want%20to%20book%20an%20appointment."
-                            target="_blank" rel="noopener"
-                            onclick="gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_appointment'});">
-                            <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp to Book
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- LIVE CHAT CTA -->
-        <section id="live-chat-cta">
-            <div class="container">
-                <div class="section-card"
-                    style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
-                    <div>
-                        <h2 style="margin:0 0 8px 0; font-size:22px;">Need quick answers?</h2>
-                        <p style="margin:0; color:var(--muted); line-height:1.65;">
-                            Use Live Chat or WhatsApp and we’ll respond fast.
-                        </p>
-                    </div>
-                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                        <button class="btn primary" onclick="if(window.Tawk_API) window.Tawk_API.toggle()">
-                            <i class="ph-bold ph-chat-circle-dots"></i> Live Chat
-                        </button>
-                        <a class="btn whatsapp"
-                            href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20have%20a%20question."
-                            target="_blank" rel="noopener"
-                            onclick="gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_live_chat_cta'});">
-                            <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ (Primary) -->
+        <!-- FAQ -->
         <section id="faq">
             <div class="container">
                 <div class="section-card">
-                    <h2 style="margin:0 0 12px 0; font-size:22px;">Frequently Asked Questions</h2>
-                    <p style="margin:0 0 18px 0; color:var(--muted); line-height:1.65;">
-                        Here are answers to common questions students ask before applying.
-                    </p>
+                    <h2 style="margin:0 0 25px 0; font-size:22px;">Frequently Asked Questions</h2>
 
-                    <div class="faq-list">
-
+                    <div class="faq-grid">
                         <div class="faq-item">
-                            <button class="faq-q" type="button" onclick="toggleFAQ(this)" aria-label="Toggle FAQ">
-                                <span>Which countries do you support?</span>
-                                <i class="ph-bold ph-caret-down"></i>
-                            </button>
-                            <div class="faq-a">
-                                We support UK, USA, Canada, Australia, Europe and other destinations based on your
-                                profile and budget.
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>What is the best country for study abroad?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>It depends on your goals, budget, and academic profile. We help you choose based on
+                                    your profile.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
-                            <button class="faq-q" type="button" onclick="toggleFAQ(this)" aria-label="Toggle FAQ">
-                                <span>Do you help with visa filing and interview preparation?</span>
-                                <i class="ph-bold ph-caret-down"></i>
-                            </button>
-                            <div class="faq-a">
-                                Yes. We guide documentation, financial proofs, visa filing steps, and interview
-                                preparation.
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>How much does it cost to study abroad?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Costs vary by country and university. We’ll give you a clear estimate based on your
+                                    profile and intake.</p>
                             </div>
                         </div>
 
                         <div class="faq-item">
-                            <button class="faq-q" type="button" onclick="toggleFAQ(this)" aria-label="Toggle FAQ">
-                                <span>Can you assist with accommodation?</span>
-                                <i class="ph-bold ph-caret-down"></i>
-                            </button>
-                            <div class="faq-a">
-                                Yes. We guide on-campus / off-campus options and help you plan accommodation before you
-                                fly.
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <h4>What is your visa success rate?</h4>
+                                <i class="ph-bold ph-plus"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our visa success rate is <strong>98%</strong>. We support documentation, interviews,
+                                    and compliance.</p>
                             </div>
                         </div>
-
-                        <div class="faq-item">
-                            <button class="faq-q" type="button" onclick="toggleFAQ(this)" aria-label="Toggle FAQ">
-                                <span>Do you provide education loan support?</span>
-                                <i class="ph-bold ph-caret-down"></i>
-                            </button>
-                            <div class="faq-a">
-                                Yes. We guide on loan eligibility, documents and process through leading partners.
-                            </div>
-                        </div>
-
                     </div>
 
-                    <div style="margin-top:16px; text-align:center;">
-                        <a class="btn" href="#contact"><i class="ph-bold ph-chats-circle"></i> Ask a Question</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BLOG (dynamic) -->
-        <section id="blog">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 12px 0; font-size:22px;">Latest Updates</h2>
-                    <p style="margin:0 0 18px 0; color:var(--muted); line-height:1.65;">
-                        Curated news and updates related to study abroad, visas, education and career trends.
-                    </p>
-
-                    <div id="blog-grid" class="blog-grid">
-                        <!-- JS fills this -->
-                        <div class="blog-card">
-                            <div class="blog-date">Loading…</div>
-                            <h3>Please wait</h3>
-                            <p>Fetching latest articles…</p>
-                            <span class="blog-read-more">Read →</span>
-                        </div>
-                    </div>
-
-                    <div style="margin-top:16px; color:var(--muted2); font-size:13px; text-align:center;">
-                        Want destination-specific guidance? <a href="pages/study-destinations.html">Browse
-                            destinations</a>.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- EDUCATION NEWS (dynamic) -->
-        <section id="education-news">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 12px 0; font-size:22px;">Education News</h2>
-                    <p style="margin:0 0 18px 0; color:var(--muted); line-height:1.65;">
-                        Fresh headlines updated automatically.
-                    </p>
-
-                    <div id="education-news-container" class="blog-grid">
-                        <!-- JS fills this -->
-                        <div class="blog-card">
-                            <div class="blog-date">Loading…</div>
-                            <h3>Please wait</h3>
-                            <p>Fetching education news…</p>
-                            <span class="blog-read-more">Read →</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- NEWSLETTER -->
-        <section id="newsletter">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 12px 0; font-size:22px;">Get Free Resources</h2>
-                    <p style="margin:0 0 18px 0; color:var(--muted); line-height:1.65;">
-                        Subscribe to receive scholarship alerts, visa tips, and country updates.
-                    </p>
-
-                    <form class="newsletter-form" onsubmit="handleNewsletterSignup(event)">
-                        <input type="email" class="form-control" placeholder="Your email address" required>
-                        <button type="submit" class="btn primary"><i class="ph-bold ph-paper-plane-right"></i>
-                            Subscribe</button>
-                    </form>
-
-                    <div id="newsletter-feedback" class="newsletter-feedback" style="display:none; margin-top:12px;">
-                    </div>
-
-                    <p style="margin-top:12px; color:var(--muted2); font-size:13px; line-height:1.6;">
-                        We respect your privacy. You can unsubscribe anytime.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 12px 0; font-size:22px;">About CNR</h2>
-                    <p style="margin:0 0 18px 0; color:var(--muted); line-height:1.75;">
-                        CNR Overseas Education Consultants helps students and families plan study abroad with a clear,
-                        transparent and guided approach.
-                        Our team supports you from shortlisting and applications to documentation, visa filing and
-                        accommodation guidance.
-                    </p>
-
-                    <div class="process-steps">
-                        <div class="step-card">
-                            <div class="step-num">01</div>
-                            <h4>Transparent Guidance</h4>
-                            <p>No confusion. Clear steps, timelines and document checklist.</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-num">02</div>
-                            <h4>Profile Based Planning</h4>
-                            <p>Shortlisting aligned with your academics, budget and goals.</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-num">03</div>
-                            <h4>End-to-End Support</h4>
-                            <p>Admissions, SOP/LOR, visa filing, interview support and more.</p>
-                        </div>
-                        <div class="step-card">
-                            <div class="step-num">04</div>
-                            <h4>Post-Arrival Support</h4>
-                            <p>Guidance on accommodation and settling in.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ SECONDARY (Accessible accordion) -->
-        <section id="faq-secondary">
-            <div class="container">
-                <div class="section-card">
-                    <h2 style="margin:0 0 12px 0; font-size:22px;">More FAQs</h2>
-                    <p style="margin:0 0 18px 0; color:var(--muted); line-height:1.65;">
-                        Extra questions for quick clarity.
-                    </p>
-
-                    <div class="faq-accordion">
-                        <button class="faq-question" aria-expanded="false" type="button">
-                            What documents do I need to start?
-                            <i class="ph-bold ph-caret-down"></i>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            Usually: passport, academic transcripts, test scores (if any), CV, and a draft SOP. We’ll
-                            provide a checklist based on your destination.
-                        </div>
-
-                        <button class="faq-question" aria-expanded="false" type="button">
-                            How long does the full process take?
-                            <i class="ph-bold ph-caret-down"></i>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            Timelines vary by country/intake and your readiness. We’ll map a step-by-step plan once we
-                            know your profile.
-                        </div>
-
-                        <button class="faq-question" aria-expanded="false" type="button">
-                            Can you help if I have study gaps?
-                            <i class="ph-bold ph-caret-down"></i>
-                        </button>
-                        <div class="faq-answer" aria-hidden="true">
-                            Yes. We guide how to explain gaps in SOP and documentation, and shortlist suitable options.
-                        </div>
-                    </div>
-
-                    <div style="margin-top:16px; text-align:center;">
-                        <a class="btn primary" href="#contact"><i class="ph-bold ph-chats-circle"></i> Get Free
-                            Counselling</a>
-                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ✅ Shared Footer Injected Here -->
+    <!-- Shared Footer Injected Here -->
     <div id="site-footer"></div>
 
-    <!-- Floating Chat Buttons -->
-    <div class="floating-chat-menu">
-        <button class="floating-btn chat-btn" onclick="if(window.Tawk_API) window.Tawk_API.toggle()"
-            aria-label="Chat with us" title="Chat with us">
-            <i class="ph-fill ph-chat-circle-dots"></i>
-        </button>
-
-        <a href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%2FWork%2FPR%2FMBBS%20abroad."
-            class="floating-btn whatsapp-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"
-            title="Chat on WhatsApp"
-            onclick="gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_floating'});">
-            <i class="ph-fill ph-whatsapp-logo"></i>
-        </a>
-
-        <button class="floating-menu-toggle" onclick="toggleFloatingMenu()" aria-label="Open chat menu">
-            <i class="ph-fill ph-plus"></i>
-        </button>
-    </div>
-
-    <!-- Scroll to Top -->
-    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top" title="Back to top">
-        <i class="ph-fill ph-arrow-up"></i>
-    </button>
-
-    <!-- ✅ Include loader -->
-    <script src="includes/includes.js" defer></script>
+    <!-- Page JS -->
+    <script src="includes/includes.js"></script>
 
     <script>
-        // -----------------------------------------------------------
-        // Init scripts AFTER header/footer injection (robust)
-        // -----------------------------------------------------------
-        function initOnceWhenHeaderReady() {
-            if (!document.querySelector('.navlinks') || !document.querySelector('.nav-toggle')) return false;
-            if (window.__cnrInited) return true;
-            window.__cnrInited = true;
-
-            // Footer year if present
-            const yearEl = document.getElementById('year');
-            if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-            // Scroll-to-top
-            const scrollToTopBtn = document.getElementById('scrollToTop');
-            window.addEventListener('scroll', () => {
-                if (!scrollToTopBtn) return;
-                if (window.scrollY > 300) scrollToTopBtn.classList.add('show');
-                else scrollToTopBtn.classList.remove('show');
+        // Primary FAQ toggle (index only)
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            document.querySelectorAll('#faq .faq-item.active').forEach(item => {
+                if (item !== faqItem) item.classList.remove('active');
             });
-            if (scrollToTopBtn) {
-                scrollToTopBtn.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            }
-
-            // Smooth scroll for internal links (only if target exists)
-            function smoothScrollToId(id) {
-                const el = document.querySelector(id);
-                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-            document.querySelectorAll('a[href^="#"]').forEach(a => {
-                a.addEventListener('click', (e) => {
-                    const id = a.getAttribute('href');
-                    const el = document.querySelector(id);
-                    if (!el) return;
-                    e.preventDefault();
-                    smoothScrollToId(id);
-
-                    // close mobile menu after click
-                    const navLinksEl = document.querySelector('.navlinks');
-                    const navToggleEl = document.querySelector('.nav-toggle');
-                    if (navLinksEl && navLinksEl.classList.contains('show')) {
-                        navLinksEl.classList.remove('show');
-                        if (navToggleEl) navToggleEl.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            });
-            if (window.location.hash) smoothScrollToId(window.location.hash);
-
-            // Mobile menu
-            const navToggle = document.querySelector('.nav-toggle');
-            const navLinksEl = document.querySelector('.navlinks');
-            if (navToggle && navLinksEl) {
-                navToggle.addEventListener('click', () => {
-                    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-                    navToggle.setAttribute('aria-expanded', String(!expanded));
-                    navLinksEl.classList.toggle('show');
-                });
-                document.addEventListener('click', (e) => {
-                    if (!navToggle.contains(e.target) && !navLinksEl.contains(e.target)) {
-                        navLinksEl.classList.remove('show');
-                        navToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            }
-
-            // Cookie banner (no auto-accept)
-            const cookieBanner = document.getElementById('cookie-banner');
-            const acceptBtn = document.getElementById('cookie-accept');
-            if (cookieBanner && acceptBtn) {
-                const accepted = localStorage.getItem('cookieBannerAccepted') === 'true';
-                cookieBanner.style.display = accepted ? 'none' : 'block';
-                acceptBtn.addEventListener('click', () => {
-                    localStorage.setItem('cookieBannerAccepted', 'true');
-                    cookieBanner.style.display = 'none';
-                });
-            }
-
-            // Form feedback
-            const contactForm = document.getElementById('contact-form');
-            const submitBtn = document.getElementById('submit-btn');
-            const feedback = document.getElementById('form-feedback');
-
-            if (contactForm && submitBtn) {
-                contactForm.addEventListener('submit', function () {
-                    submitBtn.disabled = true;
-                    submitBtn.innerHTML = '<i class="ph-bold ph-spinner-gap"></i> Sending...';
-                    submitBtn.style.animation = 'spin 1s linear infinite';
-                    if (window.gtag) gtag('event', 'contact_form_submitted', { event_category: 'lead', event_label: 'home_form' });
-                    // Formspree will redirect by default; this UI still helps on slow connections.
-                    if (feedback) {
-                        feedback.style.display = 'block';
-                        feedback.style.background = 'rgba(255,255,255,0.06)';
-                        feedback.style.border = '1px solid rgba(255,255,255,0.12)';
-                        feedback.style.color = 'var(--text)';
-                        feedback.textContent = 'Submitting… Please wait.';
-                    }
-                });
-            }
-
-            // Primary FAQ (simple .active toggle)
-            window.toggleFAQ = function toggleFAQ(element) {
-                const faqItem = element.parentElement;
-                document.querySelectorAll('#faq .faq-item.active').forEach(item => {
-                    if (item !== faqItem) item.classList.remove('active');
-                });
-                faqItem.classList.toggle('active');
-            };
-
-            // Secondary FAQ (accessible)
-            const faqButtons = document.querySelectorAll('#faq-secondary .faq-question');
-            faqButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-                    const answer = btn.nextElementSibling;
-
-                    faqButtons.forEach(b => {
-                        b.setAttribute('aria-expanded', 'false');
-                        const a = b.nextElementSibling;
-                        if (a) a.setAttribute('aria-hidden', 'true');
-                    });
-
-                    if (!isExpanded) {
-                        btn.setAttribute('aria-expanded', 'true');
-                        if (answer) answer.setAttribute('aria-hidden', 'false');
-                    }
-                });
-            });
-
-            // Newsletter demo
-            window.handleNewsletterSignup = function handleNewsletterSignup(event) {
-                event.preventDefault();
-                const form = event.target;
-                const email = form.querySelector('input[type="email"]').value;
-                const feedbackDiv = document.getElementById('newsletter-feedback');
-                const btn = form.querySelector('button[type="submit"]');
-                const originalHTML = btn.innerHTML;
-
-                btn.disabled = true;
-                btn.innerHTML = '<i class="ph-bold ph-spinner-gap"></i> Subscribing...';
-                btn.style.animation = 'spin 1s linear infinite';
-
-                setTimeout(() => {
-                    if (feedbackDiv) {
-                        feedbackDiv.style.display = 'block';
-                        feedbackDiv.className = 'newsletter-feedback success';
-                        feedbackDiv.innerHTML = '✓ Successfully subscribed! (Demo) We will contact you soon.';
-                    }
-                    if (window.gtag) gtag('event', 'newsletter_subscribed', { event_category: 'engagement', event_label: email });
-                    form.reset();
-
-                    btn.disabled = false;
-                    btn.innerHTML = originalHTML;
-                    btn.style.animation = 'none';
-
-                    setTimeout(() => { if (feedbackDiv) feedbackDiv.style.display = 'none'; }, 5000);
-                }, 1200);
-            };
-
-            // Education news
-            function loadEducationNews() {
-                const container = document.getElementById('education-news-container');
-                if (!container) return;
-
-                const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=education+positive&hl=en-US&gl=US&ceid=US:en');
-                const api = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
-
-                fetch(api)
-                    .then(r => r.json())
-                    .then(data => {
-                        if (!data.items) return;
-                        container.innerHTML = '';
-                        data.items.slice(0, 3).forEach(item => {
-                            const card = document.createElement('article');
-                            card.className = 'blog-card';
-                            card.innerHTML = `
-                <div class="blog-date">${new Date(item.pubDate).toLocaleDateString()}</div>
-                <h3>${item.title}</h3>
-                <p>${String(item.description || '').replace(/<[^>]*>?/gm, '').slice(0, 120)}...</p>
-                <a href="${item.link}" target="_blank" rel="noopener" class="blog-read-more">Read →</a>
-              `;
-                            container.appendChild(card);
-                        });
-                    })
-                    .catch(() => {
-                        container.innerHTML = `
-              <div class="blog-card">
-                <div class="blog-date">Info</div>
-                <h3>News loading blocked</h3>
-                <p>If your browser blocks third-party requests, this section may not load locally. It will usually work on the live domain.</p>
-                <span class="blog-read-more">—</span>
-              </div>
-            `;
-                    });
-            }
-
-            // Blog posts
-            function loadBlogPosts() {
-                const container = document.getElementById('blog-grid');
-                if (!container) return;
-
-                const queries = [
-                    'student+visa+study+abroad',
-                    'international+education+scholarship',
-                    'UK+student+visa+updates',
-                    'Canada+study+permit+updates'
-                ];
-
-                const fetches = queries.map(q => {
-                    const rssUrl = encodeURIComponent(`https://news.google.com/rss/search?q=${q}&hl=en-US&gl=US&ceid=US:en`);
-                    const api = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
-                    return fetch(api).then(r => r.json()).catch(() => null);
-                });
-
-                Promise.all(fetches).then(results => {
-                    let items = [];
-                    results.forEach(data => {
-                        if (data && data.items) items = items.concat(data.items);
-                    });
-
-                    items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-                    container.innerHTML = '';
-
-                    items.slice(0, 6).forEach(item => {
-                        const card = document.createElement('article');
-                        card.className = 'blog-card';
-                        card.innerHTML = `
-              <div class="blog-date">${new Date(item.pubDate).toLocaleDateString()}</div>
-              <h3>${item.title}</h3>
-              <p>${String(item.description || '').replace(/<[^>]*>?/gm, '').slice(0, 120)}...</p>
-              <a href="${item.link}" target="_blank" rel="noopener" class="blog-read-more">Read More →</a>
-            `;
-                        container.appendChild(card);
-                    });
-
-                    if (!items.length) {
-                        container.innerHTML = `
-              <div class="blog-card">
-                <div class="blog-date">Info</div>
-                <h3>No posts loaded</h3>
-                <p>This can happen locally if your browser blocks external requests. It should load on the live domain.</p>
-                <span class="blog-read-more">—</span>
-              </div>
-            `;
-                    }
-                }).catch(() => {
-                    container.innerHTML = `
-            <div class="blog-card">
-              <div class="blog-date">Info</div>
-              <h3>Blog loading blocked</h3>
-              <p>This section uses RSS feeds. It may not load in some local environments but works on the deployed site.</p>
-              <span class="blog-read-more">—</span>
-            </div>
-          `;
-                });
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                loadEducationNews();
-                loadBlogPosts();
-            });
-
-            // Floating menu
-            window.toggleFloatingMenu = function toggleFloatingMenu() {
-                const menu = document.querySelector('.floating-chat-menu');
-                if (menu) menu.classList.toggle('expanded');
-            };
-            document.addEventListener('click', (e) => {
-                const menu = document.querySelector('.floating-chat-menu');
-                if (menu && !menu.contains(e.target)) menu.classList.remove('expanded');
-            });
-
-            // Spinner keyframes
-            const style = document.createElement('style');
-            style.textContent = `@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`;
-            document.head.appendChild(style);
-
-            // Animate stats
-            function animateValue(element, start, end, duration) {
-                let startTimestamp = null;
-                const step = (timestamp) => {
-                    if (!startTimestamp) startTimestamp = timestamp;
-                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                    const value = Math.floor(progress * (end - start) + start);
-                    element.textContent = value + (element.dataset.suffix || '');
-                    if (progress < 1) window.requestAnimationFrame(step);
-                };
-                window.requestAnimationFrame(step);
-            }
-
-            const statsObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const statNumbers = entry.target.querySelectorAll('.stat-number');
-                        statNumbers.forEach(stat => {
-                            const target = parseInt(stat.dataset.target, 10);
-                            animateValue(stat, 0, target, 2000);
-                        });
-                        statsObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            const statsSection = document.getElementById('success-stats');
-            if (statsSection) statsObserver.observe(statsSection);
-
-            return true;
+            faqItem.classList.toggle('active');
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            if (initOnceWhenHeaderReady()) return;
+        // Form submit (simple)
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        if (contactForm && submitBtn) {
+            contactForm.addEventListener('submit', function () {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="ph-bold ph-spinner-gap"></i> Sending...';
+                submitBtn.style.animation = 'spin 1s linear infinite';
+            });
+        }
 
-            const t = setInterval(() => {
-                if (initOnceWhenHeaderReady()) clearInterval(t);
-            }, 80);
-
-            setTimeout(() => clearInterval(t), 8000);
-        });
+        // Spinner animation
+        const style = document.createElement('style');
+        style.textContent = `@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }`;
+        document.head.appendChild(style);
     </script>
-
 </body>
 
 </html>
