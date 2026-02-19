@@ -31,7 +31,7 @@
     <!-- Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <!-- GA4 (keep your existing id if configured) -->
+    <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -43,67 +43,8 @@
 
 <body>
 
-    <!-- TOP BAR -->
-    <div class="topbar">
-        <div class="container">
-            <div class="topbar-inner">
-                <div class="chips">
-                    <div class="chip"><i class="ph-fill ph-envelope-simple"></i><strong>Email:</strong>
-                        <a
-                            href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a>
-                    </div>
-                    <div class="chip"><span class="icon">🇬🇧</span><strong>UK:</strong>
-                        <a href="tel:+447774366673">+44 777 43 666 73</a>
-                    </div>
-                    <div class="chip"><span class="icon">🇮🇳</span><strong>IND:</strong>
-                        <a href="tel:+917013098218">+91 7013098218</a> |
-                        <a href="tel:+918500199988">8500199988</a>
-                    </div>
-                </div>
-
-                <a class="website-domain" href="https://cnr-studyabroadconsultants.com" aria-label="Website domain">
-                    <i class="ph-fill ph-globe"></i>
-                    <span>cnr-studyabroadconsultants.com</span>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- HEADER / NAV -->
-    <header>
-        <div class="container">
-            <div class="nav">
-                <a href="../index.html" class="brand" style="text-decoration:none; color:inherit;">
-                    <img src="../assets/images/logo.jpeg" alt="CNR Logo" class="logo-img">
-                    <div>
-                        <h1>CNR Overseas Education Consultants</h1>
-                        <p>Study • Work • PR • MBBS Abroad</p>
-                    </div>
-                </a>
-
-                <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
-                    <i class="ph-fill ph-list"></i>
-                </button>
-
-                <nav class="navlinks" aria-label="Primary navigation">
-                    <a href="../index.html#destinations"><i class="ph-bold ph-globe"></i> Destinations</a>
-                    <a href="../index.html#services"><i class="ph-bold ph-briefcase"></i> Services</a>
-                    <a href="../index.html#faq"><i class="ph-bold ph-question"></i> FAQ</a>
-                    <a href="../index.html#contact"><i class="ph-bold ph-envelope"></i> Contact</a>
-                </nav>
-
-                <div class="nav-actions">
-                    <a class="btn whatsapp"
-                        href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%20Abroad."
-                        target="_blank" rel="noopener"
-                        onclick="gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_destinations_hub'});">
-                        <i class="ph-fill ph-whatsapp-logo"></i>
-                        WhatsApp
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+    <!-- Shared Header Injected Here -->
+    <div id="site-header"></div>
 
     <main>
         <div class="container">
@@ -146,7 +87,6 @@
                     </p>
 
                     <div class="dest-grid">
-                        <!-- UK -->
                         <a href="./study-in-uk.html" class="dest-card" style="text-decoration:none;">
                             <img src="../assets/images/uk.png" alt="Study in UK" loading="lazy">
                             <div class="dest-overlay">
@@ -155,7 +95,6 @@
                             </div>
                         </a>
 
-                        <!-- USA (placeholder page for next PR) -->
                         <a href="./study-in-usa.html" class="dest-card" style="text-decoration:none;">
                             <img src="../assets/images/usa.png" alt="Study in USA" loading="lazy">
                             <div class="dest-overlay">
@@ -164,7 +103,6 @@
                             </div>
                         </a>
 
-                        <!-- Canada (placeholder page for next PR) -->
                         <a href="./study-in-canada.html" class="dest-card" style="text-decoration:none;">
                             <img src="../assets/images/canada.png" alt="Study in Canada" loading="lazy">
                             <div class="dest-overlay">
@@ -173,7 +111,6 @@
                             </div>
                         </a>
 
-                        <!-- Australia (placeholder page for next PR) -->
                         <a href="./study-in-australia.html" class="dest-card" style="text-decoration:none;">
                             <img src="../assets/images/australia.png" alt="Study in Australia" loading="lazy">
                             <div class="dest-overlay">
@@ -182,7 +119,6 @@
                             </div>
                         </a>
 
-                        <!-- Europe -->
                         <a href="#destinations-form" class="dest-card" style="text-decoration:none;">
                             <img src="../assets/images/europe.png" alt="Study in Europe" loading="lazy">
                             <div class="dest-overlay">
@@ -191,7 +127,6 @@
                             </div>
                         </a>
 
-                        <!-- Middle East -->
                         <a href="#destinations-form" class="dest-card" style="text-decoration:none;">
                             <img src="../assets/images/dubai.png" alt="Study in Middle East" loading="lazy">
                             <div class="dest-overlay">
@@ -205,8 +140,6 @@
                         style="margin-top:15px; padding:12px; background:rgba(255,255,255,0.05); border-radius:12px; font-size:13px; color:var(--muted); line-height:1.6;">
                         <strong>Also admitting for:</strong> New Zealand, Switzerland, Malta, Latvia, Lithuania, and
                         more destinations.
-                        <br><strong>Next:</strong> We will add dedicated pages for USA, Canada, Australia (same template
-                        as UK).
                     </div>
                 </div>
             </section>
@@ -288,11 +221,12 @@
                     </form>
 
                     <div style="margin-top:14px; color:var(--muted2); font-size: 13px;">
-                        Prefer WhatsApp? <a
-                            href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%20Abroad."
+                        Prefer WhatsApp?
+                        <a href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%20Abroad."
                             target="_blank" rel="noopener"
-                            onclick="gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_destinations_form'});">Click
-                            here</a>.
+                            onclick="if(window.gtag){gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_destinations_form'});}">
+                            Click here
+                        </a>.
                     </div>
                 </div>
             </section>
@@ -300,51 +234,11 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="foot">
-                <div>
-                    <div style="font-weight:800; color:var(--text); margin-bottom:6px;">CNR Overseas Education
-                        Consultants</div>
-                    <div><i class="ph-fill ph-envelope-simple"></i> <a
-                            href="mailto:contact@cnr-studyabroadconsultants.com">contact@cnr-studyabroadconsultants.com</a>
-                    </div>
-                    <div>🇬🇧 <a href="tel:+447774366673">+44 777 43 666 73</a> · 🇮🇳 <a href="tel:+918500199988">+91
-                            85001 99988</a>
-                    </div>
-                </div>
-                <div style="text-align:right;">
-                    <div><i class="ph-fill ph-globe"></i> <a
-                            href="https://cnr-studyabroadconsultants.com">cnr-studyabroadconsultants.com</a>
-                    </div>
-                    <div style="margin-top:6px;">© <span id="year"></span> CNR. All rights reserved.</div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Shared Footer Injected Here -->
+    <div id="site-footer"></div>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // mobile menu toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinksEl = document.querySelector('.navlinks');
-        if (navToggle && navLinksEl) {
-            navToggle.addEventListener('click', () => {
-                const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-                navToggle.setAttribute('aria-expanded', String(!expanded));
-                navLinksEl.classList.toggle('show');
-            });
-
-            document.addEventListener('click', (e) => {
-                if (!navToggle.contains(e.target) && !navLinksEl.contains(e.target)) {
-                    navLinksEl.classList.remove('show');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                }
-            });
-        }
-    </script>
+    <!-- Includes loader -->
+    <script src="../includes/includes.js"></script>
 
 </body>
 
