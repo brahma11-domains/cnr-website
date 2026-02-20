@@ -1,25 +1,29 @@
 // includes/includes.js
-// Loads shared header/footer into placeholders.
-// Usage in pages:
-//   <div data-include="header" data-root=".."></div>
-//   ...
-//   <div data-include="footer" data-root=".."></div>
+// Loads shared header/footer into placeholders:
+// <div id="site-header"></div>
+// <div id="site-footer"></div>
 
 (function () {
-  async function loadInclude(el) {
-    const name = el.getAttribute("data-include"); // header | footer
-    const root = el.getAttribute("data-root") || ".";
-    const url = `${root}/includes/${name}.html`;
+  const isPages = window.location.pathname.includes("/pages/");
+  const base = isPages ? ".." : ".";
+  const headerUrl = `${base}/includes/header.html`;
+  const footerUrl = `${base}/includes/footer.html`;
 
-    const res = await fetch(url, { cache: "no-cache" });
-    if (!res.ok) {
-      el.innerHTML = `<!-- Failed to load include: ${url} (${res.status}) -->`;
-      return;
+  async function loadInto(id, url) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    try {
+      const res = await fetch(url, { cache: "no-cache" });
+      if (!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
+      el.innerHTML = await res.text();
+    } catch (err) {
+      console.error(err);
+      el.innerHTML = "";
     }
-    el.innerHTML = await res.text();
   }
 
-  function initMobileNav() {
+  function wireMobileMenu() {
     const navToggle = document.querySelector(".nav-toggle");
     const navLinksEl = document.querySelector(".navlinks");
     if (!navToggle || !navLinksEl) return;
@@ -38,35 +42,9 @@
     });
   }
 
-  function initYear() {
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-  }
-
-  function markActiveNav() {
-    const path = window.location.pathname;
-    const links = document.querySelectorAll(".navlinks a");
-    links.forEach((a) => {
-      const href = a.getAttribute("href") || "";
-      // Mark active for exact page routes
-      const isActive =
-        (href.startsWith("/pages/") && path.startsWith(href)) ||
-        (href === "/pages/mbbs-abroad.html" && path.includes("mbbs-abroad")) ||
-        (href === "/pages/study-destinations.html" && path.includes("study-destinations")) ||
-        (href === "/pages/why-choose-cnr.html" && path.includes("why-choose-cnr"));
-      if (isActive) a.classList.add("active");
-    });
-  }
-
-  async function init() {
-    const placeholders = Array.from(document.querySelectorAll("[data-include]"));
-    await Promise.all(placeholders.map(loadInclude));
-
-    // After includes are injected:
-    initMobileNav();
-    initYear();
-    markActiveNav();
-  }
-
-  document.addEventListener("DOMContentLoaded", init);
+  document.addEventListener("DOMContentLoaded", async () => {
+    await loadInto("site-header", headerUrl);
+    await loadInto("site-footer", footerUrl);
+    wireMobileMenu();
+  });
 })();
