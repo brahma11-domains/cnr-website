@@ -1,13 +1,4 @@
-<!-- COOKIE / PRIVACY BANNER -->
-<div id="cookie-banner" class="cookie-banner" style="display:none;">
-    <p>
-        We use cookies and similar technologies to enhance your experience, analyze traffic, and provide our chat
-        service.
-        By continuing to use this site you agree to our
-        <a href="/privacy-policy.html" id="privacy-link">Privacy Policy</a>.
-    </p>
-    <button id="cookie-accept" class="btn primary" aria-label="Accept cookies">Accept</button>
-</div>
+<!-- includes/header.html -->
 
 <!-- TOP BAR -->
 <div class="topbar">
@@ -49,28 +40,24 @@
                 </div>
             </a>
 
-            <!-- mobile menu toggle -->
             <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <i class="ph-fill ph-list"></i>
             </button>
 
             <nav class="navlinks" aria-label="Primary navigation">
                 <a href="/pages/study-destinations.html"><i class="ph-bold ph-globe"></i> Destinations</a>
-                <a href="/index.html#mbbs"><i class="ph-bold ph-heartbeat"></i> MBBS Abroad</a>
+                <a href="/pages/mbbs-abroad.html"><i class="ph-bold ph-stethoscope"></i> MBBS Abroad</a>
                 <a href="/index.html#services"><i class="ph-bold ph-briefcase"></i> Services</a>
-                <a href="/pages/why-choose-cnr.html"><i class="ph-bold ph-seal-check"></i> Why Choose CNR</a>
+                <a href="/pages/why-choose-cnr.html"><i class="ph-bold ph-seal-check"></i> Why Choose</a>
                 <a href="/index.html#faq"><i class="ph-bold ph-question"></i> FAQ</a>
-                <a href="/index.html#blog"><i class="ph-bold ph-article"></i> Blog</a>
-                <a href="/index.html#education-news"><i class="ph-bold ph-newspaper"></i> News</a>
-                <a href="/index.html#about"><i class="ph-bold ph-info"></i> About</a>
                 <a href="/index.html#contact"><i class="ph-bold ph-envelope"></i> Contact</a>
             </nav>
 
             <div class="nav-actions">
                 <a class="btn whatsapp"
-                    href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20Study%2FWork%2FPR%2FMBBS%20abroad."
+                    href="https://wa.me/918500199988?text=Hi%20CNR%20Team%2C%20I%20need%20guidance%20for%20MBBS%20Abroad."
                     target="_blank" rel="noopener"
-                    onclick="if(window.gtag){gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_contact'});}">
+                    onclick="window.gtag && gtag('event','whatsapp_click',{event_category:'lead',event_label:'whatsapp_header'});">
                     <i class="ph-fill ph-whatsapp-logo"></i>
                     WhatsApp
                 </a>

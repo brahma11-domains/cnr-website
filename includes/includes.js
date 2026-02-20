@@ -1,57 +1,72 @@
-(async function () {
-  // Decide relative prefix for fetching include files
-  // - index.html at root: "" => "includes/header.html"
-  // - /pages/*.html: "../" => "../includes/header.html"
-  const isPagesFolder = window.location.pathname.includes('/pages/');
-  const prefix = isPagesFolder ? '../' : '';
+// includes/includes.js
+// Loads shared header/footer into placeholders.
+// Usage in pages:
+//   <div data-include="header" data-root=".."></div>
+//   ...
+//   <div data-include="footer" data-root=".."></div>
 
-  async function loadInto(id, file) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    const res = await fetch(prefix + 'includes/' + file);
+(function () {
+  async function loadInclude(el) {
+    const name = el.getAttribute("data-include"); // header | footer
+    const root = el.getAttribute("data-root") || ".";
+    const url = `${root}/includes/${name}.html`;
+
+    const res = await fetch(url, { cache: "no-cache" });
     if (!res.ok) {
-      el.innerHTML = `<div style="padding:12px; border:1px solid rgba(255,255,255,0.1); border-radius:10px; color:#fff;">
-        Failed to load ${file} (${res.status}). Check includes path.
-      </div>`;
+      el.innerHTML = `<!-- Failed to load include: ${url} (${res.status}) -->`;
       return;
     }
     el.innerHTML = await res.text();
   }
 
-  await loadInto('site-header', 'header.html');
-  await loadInto('site-footer', 'footer.html');
+  function initMobileNav() {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinksEl = document.querySelector(".navlinks");
+    if (!navToggle || !navLinksEl) return;
 
-  // Set footer year (after footer is injected)
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  // Mobile menu toggle (after header is injected)
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinksEl = document.querySelector('.navlinks');
-  if (navToggle && navLinksEl) {
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      navLinksEl.classList.toggle('show');
+    navToggle.addEventListener("click", () => {
+      const expanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", String(!expanded));
+      navLinksEl.classList.toggle("show");
     });
 
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
       if (!navToggle.contains(e.target) && !navLinksEl.contains(e.target)) {
-        navLinksEl.classList.remove('show');
-        navToggle.setAttribute('aria-expanded', 'false');
+        navLinksEl.classList.remove("show");
+        navToggle.setAttribute("aria-expanded", "false");
       }
     });
   }
 
-  // Cookie banner handling (NO auto-accept)
-  const cookieBanner = document.getElementById('cookie-banner');
-  const acceptBtn = document.getElementById('cookie-accept');
-  if (cookieBanner && acceptBtn) {
-    const accepted = localStorage.getItem('cookieBannerAccepted') === 'true';
-    cookieBanner.style.display = accepted ? 'none' : 'block';
-    acceptBtn.addEventListener('click', () => {
-      localStorage.setItem('cookieBannerAccepted', 'true');
-      cookieBanner.style.display = 'none';
+  function initYear() {
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  }
+
+  function markActiveNav() {
+    const path = window.location.pathname;
+    const links = document.querySelectorAll(".navlinks a");
+    links.forEach((a) => {
+      const href = a.getAttribute("href") || "";
+      // Mark active for exact page routes
+      const isActive =
+        (href.startsWith("/pages/") && path.startsWith(href)) ||
+        (href === "/pages/mbbs-abroad.html" && path.includes("mbbs-abroad")) ||
+        (href === "/pages/study-destinations.html" && path.includes("study-destinations")) ||
+        (href === "/pages/why-choose-cnr.html" && path.includes("why-choose-cnr"));
+      if (isActive) a.classList.add("active");
     });
   }
+
+  async function init() {
+    const placeholders = Array.from(document.querySelectorAll("[data-include]"));
+    await Promise.all(placeholders.map(loadInclude));
+
+    // After includes are injected:
+    initMobileNav();
+    initYear();
+    markActiveNav();
+  }
+
+  document.addEventListener("DOMContentLoaded", init);
 })();
