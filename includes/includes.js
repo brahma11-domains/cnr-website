@@ -1,18 +1,24 @@
-// assets/js/includes.js
-(() => {
-  async function loadInclude(el) {
-    const url = el.getAttribute("data-include");
-    if (!url) return;
+// includes/includes.js
+// Loads shared header/footer into placeholders:
+// <div id="site-header"></div>
+// <div id="site-footer"></div>
 
+(function () {
+  const isPages = window.location.pathname.includes("/pages/");
+  const base = isPages ? ".." : ".";
+  const headerUrl = `${base}/includes/header.html`;
+  const footerUrl = `${base}/includes/footer.html`;
+
+  async function loadInto(id, url) {
+    const el = document.getElementById(id);
+    if (!el) return;
     try {
       const res = await fetch(url, { cache: "no-cache" });
-      if (!res.ok) {
-        throw new Error(`Failed to load include: ${url} (${res.status})`);
-      }
-      const html = await res.text();
-      el.outerHTML = html;
+      if (!res.ok) throw new Error(`Failed to load ${url} (${res.status})`);
+      el.innerHTML = await res.text();
     } catch (err) {
       console.error(err);
+      el.innerHTML = "";
     }
   }
 
@@ -45,25 +51,27 @@
 
     const links = document.querySelectorAll(".navlinks a");
     links.forEach((a) => {
-      const href = a.getAttribute("href") || "";
+      const href = (a.getAttribute("href") || "").trim();
 
       // Only mark active for real page routes (not hash links)
       const isPageLink = href.startsWith("/pages/") || href.startsWith("pages/");
       if (!isPageLink) return;
 
-      // Normalize for comparison
       const hrefNormalized = href.startsWith("/") ? href : `/${href}`;
-      if (path === hrefNormalized || path.startsWith(hrefNormalized.replace(".html", ""))) {
+
+      // Exact match, or folder-style match without .html
+      const hrefNoExt = hrefNormalized.replace(".html", "");
+      if (path === hrefNormalized || path === hrefNoExt) {
         a.classList.add("active");
       }
     });
   }
 
   async function init() {
-    const placeholders = Array.from(document.querySelectorAll("[data-include]"));
-    await Promise.all(placeholders.map(loadInclude));
+    await loadInto("site-header", headerUrl);
+    await loadInto("site-footer", footerUrl);
 
-    // after injection
+    // After injection:
     initMobileNav();
     initYear();
     markActiveNav();
